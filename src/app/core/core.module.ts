@@ -1,13 +1,32 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CoreComponent } from './core.component';
+import { RouterModule } from '@angular/router';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+import { EnsureModuleLoadedOnceGuard } from './ensure-module-loaded-once-guard.guard';
+import { NavbarComponent } from './navbar/navbar.component';
+import { MyOwnCustomMaterialModule } from '../shared/my-own-custom-material/my-own-custom-material.module';
 
 
 
 @NgModule({
-  declarations: [CoreComponent],
+  declarations: [NavbarComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+
+    MyOwnCustomMaterialModule,
+    FlexLayoutModule
+  ],
+  exports: [
+    RouterModule,
+    NavbarComponent
   ]
 })
-export class CoreModule { }
+export class CoreModule extends EnsureModuleLoadedOnceGuard {    // Ensure that CoreModule is only loaded into AppModule
+
+  // Looks for the module in the parent injector to see if it's already been loaded (only want it loaded once)
+  constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
+    super(parentModule);
+  }
+}
