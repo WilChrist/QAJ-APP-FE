@@ -22,7 +22,7 @@
     <mat-sidenav-container fxFlexFill class="example-container">
       <mat-sidenav #sidenav fxLayout="column">
         <div fxLayout="column">
-          <a (click)="sidenav.toggle()" href="#" mat-button>Close</a>
+          <a (click)="sidenav.toggle()" href="#" mat-button> <mat-icon>close</mat-icon> Close</a>
           <a mat-button [routerLink]="'/Quotes'"> <mat-icon>format_quote</mat-icon> Quotes </a>
           <a mat-button [routerLink]="'/Authors'"> <mat-icon>people</mat-icon> Authors </a>
           <a mat-button [routerLink]="'/Topics'"> <mat-icon>category</mat-icon> Topics </a>
