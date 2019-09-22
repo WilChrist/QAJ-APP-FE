@@ -4,13 +4,14 @@ import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { EnsureModuleLoadedOnceGuard } from './ensure-module-loaded-once-guard.guard';
-import { NavbarComponent } from './navbar/navbar.component';
 import { MyOwnCustomMaterialModule } from '../shared/my-own-custom-material/my-own-custom-material.module';
+import { HeaderComponent } from './navigation/header/header.component';
+import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 
 
 
 @NgModule({
-  declarations: [NavbarComponent],
+  declarations: [HeaderComponent, SidenavListComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -20,7 +21,10 @@ import { MyOwnCustomMaterialModule } from '../shared/my-own-custom-material/my-o
   ],
   exports: [
     RouterModule,
-    NavbarComponent
+    MyOwnCustomMaterialModule,
+    FlexLayoutModule,
+    HeaderComponent,
+    SidenavListComponent
   ]
 })
 export class CoreModule extends EnsureModuleLoadedOnceGuard {    // Ensure that CoreModule is only loaded into AppModule

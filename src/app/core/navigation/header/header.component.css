@@ -3,3 +3,8 @@
      Every toolbar row uses a flexbox row layout. */
   flex: 1 1 auto;
 }
+.navigation-items{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}

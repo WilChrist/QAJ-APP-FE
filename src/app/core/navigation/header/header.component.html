@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+    <span>Quotes About Jesus</span>
+
+    <span class="fill-remaining-space"></span>
+
+    <div fxShow="true" fxHide.lt-md="true">
+      <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+      <ul fxLayout fxLayoutGap="20px" class="navigation-items">
+          <li> <a mat-button [routerLink]="'/Quotes'"> <mat-icon>format_quote</mat-icon> Quotes </a> </li>
+          <li> <a mat-button [routerLink]="'/Authors'"> <mat-icon>people</mat-icon> Authors </a> </li>
+          <li> <a mat-button [routerLink]="'/Topics'"> <mat-icon>category</mat-icon> Topics </a> </li>
+          <li> <a mat-button [routerLink]="'/About'"> <mat-icon>info</mat-icon> About </a> </li>
+      </ul>
+    </div>
+
+    <div fxShow="true" fxHide.gt-sm="true">
+        <button mat-icon-button (click)="onToggleSidenav()">
+            <mat-icon>menu</mat-icon>
+          </button>
+    </div>
+</mat-toolbar>
