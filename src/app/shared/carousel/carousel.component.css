@@ -27,27 +27,27 @@
 }
 
 .tile h3 {
-  font-size: 1.5vw;
+  font-size: 1.1vw;
   font-style: italic;
   vertical-align: middle;
   display: inline-block;
   text-align: center;
-  line-height: 30px;
+  line-height: 140%;
   color: white;
-  margin: 5%;
-  margin-bottom: 20px;
+  margin: 7%;
+  margin-bottom: 0px;
 }
 .tile h2 {
-  font-size: 1.9vw;
+  font-size: 1.4vw;
   font-style: normal;
   font-weight: bold;
   color: yellow;
   vertical-align: top;
   display: inline-block;
   text-align: right;
-  line-height: 30px;
-  margin: 10%;
-  margin-left: 70%;
+  line-height: normal;
+  margin: 5%;
+  margin-left: 75%;
 }
 .tile .quote {
   min-height: 400px;
@@ -205,4 +205,185 @@ nav h1 {
 .myBannerPoint li .active {
   transform: translateY(-10px);
   transition: 0.3s ease all;
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .tile {
+    min-height: 350px;
+    max-height: 350px;
+  }
+
+  .tile h3 {
+    font-size: 1.5vw;
+    line-height: normal;
+    margin: 2%;
+    margin-bottom: 15px;
+  }
+  .tile h2 {
+    font-size: 1.7vw;
+    line-height: 20px;
+    margin: 9%;
+    margin-top: 2%;
+    margin-left: 70%;
+  }
+  .tile .quote {
+    min-height: 350px;
+    max-height: 350px;
+    line-height: 300px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .tile {
+    min-height: 300px;
+    max-height: 300px;
+  }
+
+  .tile h3 {
+    font-size: 1.9vw;
+    line-height: normal;
+    margin: 2%;
+    margin-bottom: 15px;
+  }
+  .tile h2 {
+    font-size: 2.2vw;
+    line-height: 20px;
+    margin: 9%;
+    margin-top: 2%;
+    margin-left: 73%;
+  }
+  .tile .quote {
+    min-height: 300px;
+    max-height: 300px;
+    line-height: 250px;
+  }
+  .carBtn {
+    width: 45px;
+    height: 45px;
+  }
+
+  .leftRs {
+    width: 45px;
+    height: 45px;
+  }
+
+  .rightRs {
+    width: 45px;
+    height: 45px;
+  }
+
+  .leftRs1 {
+    width: 45px;
+    height: 45px;
+  }
+
+  .rightRs1 {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .tile {
+    min-height: 250px;
+    max-height: 250px;
+  }
+
+  .tile h3 {
+    font-size: 2.0vw;
+    line-height: normal;
+    margin: 3%;
+    margin-bottom: 10px;
+  }
+  .tile h2 {
+    font-size: 2.5vw;
+    line-height: 20px;
+    margin: 8%;
+    margin-top: 2%;
+    margin-left: 72%;
+  }
+  .tile .quote {
+    min-height: 250px;
+    max-height: 250px;
+    line-height: 175px;
+  }
+  .carBtn {
+    width: 35px;
+    height: 35px;
+  }
+
+  .leftRs {
+    width: 35px;
+    height: 35px;
+  }
+
+  .rightRs {
+    width: 35px;
+    height: 35px;
+  }
+
+  .leftRs1 {
+    width: 35px;
+    height: 35px;
+  }
+
+  .rightRs1 {
+    width: 35px;
+    height: 35px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .tile {
+    min-height: 200px;
+  }
+
+  .tile h3 {
+    font-size: 2.5vw;
+    line-height: 10px;
+    color: white;
+    margin: 2%;
+    margin-bottom: 10px;
+  }
+  .tile h2 {
+    font-size: 2.9vw;
+    line-height: 10px;
+    margin: 7%;
+    margin-top: 0%;
+    margin-left: 70%;
+  }
+  .tile .quote {
+    min-height: 200px;
+    max-height: 200px;
+    line-height: 150px;
+  }
+  .carBtn {
+    width: 25px;
+    height: 25px;
+  }
+
+  .leftRs {
+    width: 25px;
+    height: 25px;
+  }
+
+  .rightRs {
+    width: 25px;
+    height: 25px;
+  }
+
+  .leftRs1 {
+    width: 25px;
+    height: 25px;
+  }
+
+  .rightRs1 {
+    width: 25px;
+    height: 25px;
+  }
+
 }
