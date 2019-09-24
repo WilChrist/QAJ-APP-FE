@@ -1,1 +1,37 @@
-<p>quotes-grid works!</p>
+<mat-grid-list cols="3" rowHeight="35em">
+  <mat-grid-tile *ngFor="let quote of quotes">
+    <mat-card class="quote-card">
+      <mat-card-header>
+        <img mat-card-avatar class="quote-author-image" src="{{quote.author_img}}"/>
+        <mat-card-title>{{ quote.author }}</mat-card-title>
+        <mat-card-subtitle >{{ quote.created_at }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+        <p>
+          {{quote.content}}
+        </p>
+      </mat-card-content>
+      <mat-divider></mat-divider>
+      <mat-card-actions>
+        <button
+          mat-flat-button
+          color="primary"
+          aria-label="Thumbs up button for like"
+        >
+          <mat-icon>thumb_up</mat-icon>
+        </button>
+        <button
+          mat-flat-button
+          color="warn"
+          aria-label="Thumbs down button for dislike"
+        >
+          <mat-icon>thumb_down</mat-icon>
+        </button>
+        <button mat-flat-button color="accent" aria-label="button for sharing">
+          <mat-icon>share</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

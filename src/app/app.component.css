@@ -5,3 +5,8 @@ mat-sidenav-container, mat-sidenav-content, mat-sidenav {
 main {
   padding: 10px;
 }
+section.main {
+  background-color: white;
+  padding: 1%;
+}
+

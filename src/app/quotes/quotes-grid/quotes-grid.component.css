@@ -1,0 +1,15 @@
+.quote-card {
+  max-width: 300px;
+}
+
+.quote-author-image {
+  /*background-image: url('https://source.unsplash.com/random/200×200/?boy');*/
+  background-size: cover;
+}
+button {
+  margin: 2px;
+}
+p {
+  padding-top: 3%;
+  font-style: italic;
+}
