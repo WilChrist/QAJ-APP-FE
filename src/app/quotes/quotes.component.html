@@ -1,8 +1,21 @@
 <mat-card><app-carousel></app-carousel></mat-card>
 <section>
-  <h1>Quotes</h1>
+    <mat-toolbar color="accent">
+        <mat-toolbar-row>
+            <h1>Quotes</h1>
+          <span class="fill-remaining-space"></span>
+          <button mat-icon-button aria-label="button for displaying in Grid mode" matTooltip="Grid Mode">
+              <mat-icon>grid_on</mat-icon>
+            </button>
+            <button mat-icon-button aria-label="button for displaying in List mode" matTooltip="List Mode">
+                <mat-icon>list</mat-icon>
+              </button>
+        </mat-toolbar-row>
+      </mat-toolbar>
+
 
   <app-quotes-grid [quotes]="quotes">
 
   </app-quotes-grid>
 </section>
+

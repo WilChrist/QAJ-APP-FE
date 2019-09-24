@@ -1,9 +1,8 @@
 .quote-card {
-  max-width: 300px;
+  margin: 2%;
 }
 
 .quote-author-image {
-  /*background-image: url('https://source.unsplash.com/random/200×200/?boy');*/
   background-size: cover;
 }
 button {
@@ -12,4 +11,8 @@ button {
 p {
   padding-top: 3%;
   font-style: italic;
+}
+.alignRight {
+  position: absolute;
+  right: 0px;
 }

@@ -1,5 +1,5 @@
-<mat-grid-list cols="3" rowHeight="35em">
-  <mat-grid-tile *ngFor="let quote of quotes">
+<div class="row">
+  <div *ngFor="let quote of quotes" class="col s12 m6 l4 xl3">
     <mat-card class="quote-card">
       <mat-card-header>
         <img mat-card-avatar class="quote-author-image" src="{{quote.author_img}}"/>
@@ -31,7 +31,10 @@
         <button mat-flat-button color="accent" aria-label="button for sharing">
           <mat-icon>share</mat-icon>
         </button>
+        <button mat-icon-button color="warn" aria-label="button for reporting a problem with this quote" class="alignRight" matTooltip="report">
+            <mat-icon>info</mat-icon>
+          </button>
       </mat-card-actions>
     </mat-card>
-  </mat-grid-tile>
-</mat-grid-list>
+  </div>
+</div>

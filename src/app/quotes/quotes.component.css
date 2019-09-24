@@ -1,3 +1,13 @@
 section {
-  width: 80%;
+  /*background-color: white;*/
+  margin-top: 1%;
+  border: 1px solid rgba(63, 81, 181, .1);
+}
+aside.ads {
+  margin-top: 1%;
+  background-color: aliceblue;
+  height: 1400px;
+}
+.lightPrimary {
+  background-color: rgba(63, 81, 181, .5);
 }

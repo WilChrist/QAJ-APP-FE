@@ -1,7 +1,8 @@
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatButtonModule, MatCardModule,
   MatGridListModule,
-  MatChipsModule} from '@angular/material';
+  MatChipsModule,
+  MatTooltipModule} from '@angular/material';
 import { NgModule } from '@angular/core';
 
 @NgModule({
@@ -15,7 +16,8 @@ import { NgModule } from '@angular/core';
     MatIconModule,
     MatCardModule,
     MatGridListModule,
-    MatChipsModule
+    MatChipsModule,
+    MatTooltipModule
   ],
   exports: [
     MatToolbarModule,
@@ -25,7 +27,8 @@ import { NgModule } from '@angular/core';
     MatIconModule,
     MatCardModule,
     MatGridListModule,
-    MatChipsModule
+    MatChipsModule,
+    MatTooltipModule
   ],
 })
 export class MyOwnCustomMaterialModule { }
