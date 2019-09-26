@@ -1,1 +1,36 @@
-<p>quotes-list works!</p>
+<mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Enter a term">
+    <mat-icon matSuffix>search</mat-icon>
+</mat-form-field>
+<table mat-table [dataSource]="dataSource" matSort>
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- No Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <!-- Quote Column -->
+  <ng-container matColumnDef="content">
+    <th mat-header-cell *matHeaderCellDef> Quote </th>
+    <td mat-cell *matCellDef="let element" class="mat-body mgreater"><span class="ellipsis">{{element.content}}</span></td>
+  </ng-container>
+
+  <!-- Author Column -->
+  <ng-container matColumnDef="author">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Author </th>
+    <td mat-cell *matCellDef="let element" class="center">
+      <img mat-card-avatar src="{{element.author_img}}" alt="Picture of {{element.author}}" matBadge="22" matBadgePosition="above after">
+       <button mat-button>{{element.author}}</button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>
+<mat-paginator [pageSizeOptions]="[5, 10, 20, 50, 100]" showFirstLastButtons></mat-paginator>

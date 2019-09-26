@@ -3,7 +3,12 @@ import { MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatBu
   MatGridListModule,
   MatChipsModule,
   MatTooltipModule,
-  MatPaginatorModule} from '@angular/material';
+  MatPaginatorModule,
+  MatTableModule,
+  MatBadgeModule,
+  MatSortModule,
+  MatFormFieldModule,
+  MatInputModule} from '@angular/material';
 import { NgModule } from '@angular/core';
 
 @NgModule({
@@ -19,7 +24,12 @@ import { NgModule } from '@angular/core';
     MatGridListModule,
     MatChipsModule,
     MatTooltipModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatTableModule,
+    MatBadgeModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   exports: [
     MatToolbarModule,
@@ -31,7 +41,12 @@ import { NgModule } from '@angular/core';
     MatGridListModule,
     MatChipsModule,
     MatTooltipModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatTableModule,
+    MatBadgeModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
 })
 export class MyOwnCustomMaterialModule { }

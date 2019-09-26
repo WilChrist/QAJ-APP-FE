@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Quote } from '../quotes.component';
 
 @Component({
   selector: 'app-quotes-grid',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./quotes-grid.component.css']
 })
 export class QuotesGridComponent implements OnInit {
-  @Input() quotes: any;
+  @Input() quotes: Quote[];
 
   constructor() { }
 
