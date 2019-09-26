@@ -2,7 +2,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatButtonModule, MatCardModule,
   MatGridListModule,
   MatChipsModule,
-  MatTooltipModule} from '@angular/material';
+  MatTooltipModule,
+  MatPaginatorModule} from '@angular/material';
 import { NgModule } from '@angular/core';
 
 @NgModule({
@@ -17,7 +18,8 @@ import { NgModule } from '@angular/core';
     MatCardModule,
     MatGridListModule,
     MatChipsModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatPaginatorModule
   ],
   exports: [
     MatToolbarModule,
@@ -28,7 +30,8 @@ import { NgModule } from '@angular/core';
     MatCardModule,
     MatGridListModule,
     MatChipsModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatPaginatorModule
   ],
 })
 export class MyOwnCustomMaterialModule { }
