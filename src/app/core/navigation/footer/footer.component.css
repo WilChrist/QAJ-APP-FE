@@ -1,0 +1,38 @@
+footer {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  margin: 0;
+}
+.navigation-items{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 5%;
+}
+.alignRight {
+  margin: 2%;
+}
+.mat-button-wrapper {
+  padding: 5%;
+  margin: 5%;
+}
+
+.social {
+  width: 20%;
+}
+
+.row {
+  width: 100%;
+}
+.mat-toolbar-row.foot {
+  height: 25%;
+}
+div p.mat-body {
+  margin-left: 5%;
+}
+
+.mat-toolbar-row {
+  display: block;
+
+}

@@ -7,11 +7,12 @@ import { EnsureModuleLoadedOnceGuard } from './ensure-module-loaded-once-guard.g
 import { MyOwnCustomMaterialModule } from '../shared/my-own-custom-material/my-own-custom-material.module';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
+import { FooterComponent } from './navigation/footer/footer.component';
 
 
 
 @NgModule({
-  declarations: [HeaderComponent, SidenavListComponent],
+  declarations: [HeaderComponent, SidenavListComponent, FooterComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -24,7 +25,8 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
     MyOwnCustomMaterialModule,
     FlexLayoutModule,
     HeaderComponent,
-    SidenavListComponent
+    SidenavListComponent,
+    FooterComponent
   ]
 })
 export class CoreModule extends EnsureModuleLoadedOnceGuard {    // Ensure that CoreModule is only loaded into AppModule

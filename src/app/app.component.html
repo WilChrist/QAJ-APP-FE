@@ -10,14 +10,13 @@
           <mat-sidenav-content fxFlexFill>
               <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
               <main>
-
                 <router-outlet></router-outlet>
                 <section class="main">
                   <app-quotes></app-quotes>
                 </section>
-
-
               </main>
+
+              <app-footer></app-footer>
           </mat-sidenav-content>
 
         </mat-sidenav-container>
