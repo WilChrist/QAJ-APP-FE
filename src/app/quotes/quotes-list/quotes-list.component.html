@@ -10,22 +10,22 @@
 
   <!-- No Column -->
   <ng-container matColumnDef="id">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
-    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header class="msmaller center"> No. </th>
+    <td mat-cell *matCellDef="let element" class="msmaller"> {{element.id}} </td>
   </ng-container>
 
   <!-- Quote Column -->
   <ng-container matColumnDef="content">
-    <th mat-header-cell *matHeaderCellDef> Quote </th>
-    <td mat-cell *matCellDef="let element" class="mat-body mgreater"><span class="ellipsis">{{element.content}}</span></td>
+    <th mat-header-cell *matHeaderCellDef class="center"> Quote </th>
+    <td mat-cell *matCellDef="let element" class="mat-body"><p class="block-ellipsis">{{element.content}}</p></td>
   </ng-container>
 
   <!-- Author Column -->
   <ng-container matColumnDef="author">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header> Author </th>
-    <td mat-cell *matCellDef="let element" class="center">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header class="mmedium center hauthor"> Author </th>
+    <td mat-cell *matCellDef="let element" class="center mmedium">
       <img mat-card-avatar src="{{element.author_img}}" alt="Picture of {{element.author}}" matBadge="22" matBadgePosition="above after">
-       <button mat-button>{{element.author}}</button>
+       <button mat-button class="fixWidth"><p class="pblock-ellipsis">{{element.author}}</p></button>
     </td>
   </ng-container>
 
