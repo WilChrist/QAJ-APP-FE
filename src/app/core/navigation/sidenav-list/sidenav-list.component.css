@@ -2,3 +2,6 @@
   display: inline-block;
   padding-left: 6px;
 }
+.mat-button.mat-button-base.active {
+  color: yellow;
+}

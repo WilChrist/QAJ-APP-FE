@@ -11,3 +11,7 @@ aside.ads {
 .lightPrimary {
   background-color: rgba(63, 81, 181, .5);
 }
+.mat-icon-button.mat-button-base.active {
+  background-color:rgba(63, 81, 181, .1);
+  cursor: not-allowed;
+}

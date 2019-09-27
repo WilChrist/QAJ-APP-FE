@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-export interface Quote {
+export interface IQuote {
   id: number;
   content: string;
   link_to_the_source: string;
@@ -14,7 +14,12 @@ export interface Quote {
   user_id: number;
 }
 
-const data: Quote[] = [
+enum DisplayModeEnum {
+  Grid = 0,
+  List = 1
+}
+
+const data: IQuote[] = [
   {
     id: 4,
     content: `\"I am trying here to prevent anyone saying the really foolish thing that people often say about Him:
@@ -33,7 +38,7 @@ const data: Quote[] = [
     updated_at: '2019-09-03 07:43:32',
     author_id: 1,
     author: 'C. S. Lewis',
-    author_img : 'https://source.unsplash.com/collection/895539/200x200',
+    author_img: 'https://source.unsplash.com/collection/895539/200x200',
     language_id: 2,
     user_id: 2
   },
@@ -49,7 +54,7 @@ const data: Quote[] = [
     updated_at: '2019-09-03 09:06:25',
     author_id: 2,
     author: 'Ravi Zacharias',
-    author_img : 'https://source.unsplash.com/collection/895539/201x201',
+    author_img: 'https://source.unsplash.com/collection/895539/201x201',
     language_id: 2,
     user_id: 2
   },
@@ -65,7 +70,7 @@ const data: Quote[] = [
     updated_at: '2019-09-03 09:09:15',
     author_id: 2,
     author: 'R. Zacharias',
-    author_img : 'https://source.unsplash.com/collection/895539/202x202',
+    author_img: 'https://source.unsplash.com/collection/895539/202x202',
     language_id: 2,
     user_id: 2
   },
@@ -81,7 +86,7 @@ const data: Quote[] = [
     updated_at: '2019-09-03 09:06:25',
     author_id: 2,
     author: 'Ravi Zacharias',
-    author_img : 'https://source.unsplash.com/collection/895539/203x203',
+    author_img: 'https://source.unsplash.com/collection/895539/203x203',
     language_id: 2,
     user_id: 2
   },
@@ -97,7 +102,7 @@ const data: Quote[] = [
     updated_at: '2019-09-03 09:09:15',
     author_id: 2,
     author: 'R. Zacharias',
-    author_img : 'https://source.unsplash.com/collection/895539/204x204',
+    author_img: 'https://source.unsplash.com/collection/895539/204x204',
     language_id: 2,
     user_id: 2
   },
@@ -119,7 +124,7 @@ const data: Quote[] = [
     updated_at: '2019-09-03 07:43:32',
     author_id: 1,
     author: 'C. S. Lewis',
-    author_img : 'https://source.unsplash.com/collection/895539/205x205',
+    author_img: 'https://source.unsplash.com/collection/895539/205x205',
     language_id: 2,
     user_id: 2
   }
@@ -131,11 +136,16 @@ const data: Quote[] = [
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
-  quotes: Quote[];
-  constructor() { }
+  quotes: IQuote[];
+  displayMode: DisplayModeEnum;
+  displayModeEnum = DisplayModeEnum;
+  constructor() {}
 
   ngOnInit() {
     this.quotes = data;
+    this.displayMode = DisplayModeEnum.Grid;
   }
-
+  changeDisplayMode(mode: DisplayModeEnum) {
+    this.displayMode = mode;
+  }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
-import { Quote } from '../quotes.component';
+import { IQuote } from '../quotes.component';
 import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
 
 @Component({
@@ -8,14 +8,13 @@ import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
   styleUrls: ['./quotes-list.component.css']
 })
 export class QuotesListComponent implements OnInit {
-  @Input() quotes: Quote[];
+  @Input() quotes: IQuote[];
 
-  dataSource: MatTableDataSource<Quote>;
+  dataSource: MatTableDataSource<IQuote>;
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
-  // dataSource: Quote[];
   displayedColumns: string[];
 
 
