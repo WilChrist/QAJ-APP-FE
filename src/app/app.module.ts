@@ -7,13 +7,7 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { LayoutComponent } from './layout/layout.component';
 import { QuotesModule } from './quotes/quotes.module';
-import { RouterModule, Routes } from '@angular/router';
-import { QuotesComponent } from './quotes/quotes.component';
-
-const routes: Routes = [
-  {path: 'quotes', component: QuotesComponent},
-  {path: '', redirectTo: 'quotes', pathMatch: 'full'},
-];
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -22,12 +16,11 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    // AppRoutingModule,
-    RouterModule.forRoot(routes),
 
     CoreModule,
+    SharedModule,
     QuotesModule,
-    SharedModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
