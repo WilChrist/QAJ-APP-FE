@@ -1,3 +1,4 @@
+import { AboutModule } from './about/about.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -8,6 +9,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { QuotesModule } from './quotes/quotes.module';
 import { AuthorsModule } from './authors/authors.module';
 import { AppRoutingModule } from './app-routing.module';
+import { TopicsModule } from './topics/topics.module';
 
 @NgModule({
   declarations: [
@@ -19,8 +21,10 @@ import { AppRoutingModule } from './app-routing.module';
 
     CoreModule,
     SharedModule,
-    QuotesModule,
+    AboutModule,
+    TopicsModule,
     AuthorsModule,
+    QuotesModule,
     AppRoutingModule
   ],
   providers: [],
