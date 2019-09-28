@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
 import { ILanguage } from '../shared/languages-list/languages-list.component';
+import { DisplayModeEnum } from '../shared/helpers/Enums';
 
 export interface IQuote {
   id: number;
@@ -14,13 +14,6 @@ export interface IQuote {
   author_img: string;
   language_id: number;
   user_id: number;
-}
-
-
-
-enum DisplayModeEnum {
-  Grid = 0,
-  List = 1
 }
 
 const dataQ: IQuote[] = [
@@ -136,14 +129,14 @@ const dataQ: IQuote[] = [
 
 const dataL: ILanguage[] = [
   {
-  id: 1,
-  name: 'Français'
+    id: 1,
+    name: 'Français'
   },
   {
-  id: 2,
-  name: 'English'
+    id: 2,
+    name: 'English'
   }
-  ];
+];
 
 @Component({
   selector: 'app-quotes',
