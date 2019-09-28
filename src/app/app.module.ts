@@ -8,11 +8,13 @@ import { SharedModule } from './shared/shared.module';
 import { LayoutComponent } from './layout/layout.component';
 import { QuotesModule } from './quotes/quotes.module';
 import { AppRoutingModule } from './app-routing.module';
+import { NotFoundComponent } from './error-pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutComponent
+    LayoutComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
