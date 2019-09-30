@@ -8,11 +8,12 @@ import { MyOwnCustomMaterialModule } from '../shared/my-own-custom-material/my-o
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { FooterComponent } from './navigation/footer/footer.component';
+import { NotFoundComponent } from './navigation/error-pages/not-found/not-found.component';
 
 
 
 @NgModule({
-  declarations: [HeaderComponent, SidenavListComponent, FooterComponent],
+  declarations: [HeaderComponent, SidenavListComponent, FooterComponent, NotFoundComponent],
   imports: [
     CommonModule,
     RouterModule,

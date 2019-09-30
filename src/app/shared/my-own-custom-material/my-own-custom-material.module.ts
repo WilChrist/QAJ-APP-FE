@@ -8,7 +8,9 @@ import { MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatBu
   MatBadgeModule,
   MatSortModule,
   MatFormFieldModule,
-  MatInputModule} from '@angular/material';
+  MatInputModule,
+  MatSelectModule,
+  MatProgressBarModule} from '@angular/material';
 import { NgModule } from '@angular/core';
 
 @NgModule({
@@ -29,7 +31,9 @@ import { NgModule } from '@angular/core';
     MatBadgeModule,
     MatSortModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule,
+    MatProgressBarModule
   ],
   exports: [
     MatToolbarModule,
@@ -46,7 +50,9 @@ import { NgModule } from '@angular/core';
     MatBadgeModule,
     MatSortModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule,
+    MatProgressBarModule
   ],
 })
 export class MyOwnCustomMaterialModule { }

@@ -20,6 +20,9 @@ th.mat-sort-header-sorted {
   .hauthor {
     padding-left: 5.5%;
   }
+  .block-ellipsis {
+    text-align: justify;
+  }
   @media (min-width: 1280px) {
     .hauthor {
       padding-left: 3%;

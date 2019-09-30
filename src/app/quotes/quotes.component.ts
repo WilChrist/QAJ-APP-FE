@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ILanguage } from '../shared/languages-list/languages-list.component';
+import { DisplayModeEnum } from '../shared/helpers/Enums';
 
 export interface IQuote {
   id: number;
@@ -14,12 +16,7 @@ export interface IQuote {
   user_id: number;
 }
 
-enum DisplayModeEnum {
-  Grid = 0,
-  List = 1
-}
-
-const data: IQuote[] = [
+const dataQ: IQuote[] = [
   {
     id: 4,
     content: `\"I am trying here to prevent anyone saying the really foolish thing that people often say about Him:
@@ -130,6 +127,17 @@ const data: IQuote[] = [
   }
 ];
 
+const dataL: ILanguage[] = [
+  {
+    id: 1,
+    name: 'Français'
+  },
+  {
+    id: 2,
+    name: 'English'
+  }
+];
+
 @Component({
   selector: 'app-quotes',
   templateUrl: './quotes.component.html',
@@ -137,12 +145,15 @@ const data: IQuote[] = [
 })
 export class QuotesComponent implements OnInit {
   quotes: IQuote[];
+  languages: ILanguage[];
   displayMode: DisplayModeEnum;
   displayModeEnum = DisplayModeEnum;
+
   constructor() {}
 
   ngOnInit() {
-    this.quotes = data;
+    this.quotes = dataQ;
+    this.languages = dataL;
     this.displayMode = DisplayModeEnum.Grid;
   }
   changeDisplayMode(mode: DisplayModeEnum) {

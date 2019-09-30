@@ -1,33 +1,31 @@
+import { AboutModule } from './about/about.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-//import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { LayoutComponent } from './layout/layout.component';
 import { QuotesModule } from './quotes/quotes.module';
-import { RouterModule, Routes } from '@angular/router';
-import { QuotesComponent } from './quotes/quotes.component';
-
-const routes: Routes = [
-  {path: 'quotes', component: QuotesComponent},
-  {path: '', redirectTo: 'quotes', pathMatch: 'full'},
-];
+import { AuthorsModule } from './authors/authors.module';
+import { AppRoutingModule } from './app-routing.module';
+import { TopicsModule } from './topics/topics.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutComponent
+    LayoutComponent,
   ],
   imports: [
     BrowserModule,
-    // AppRoutingModule,
-    RouterModule.forRoot(routes),
 
     CoreModule,
+    SharedModule,
+    AboutModule,
+    TopicsModule,
+    AuthorsModule,
     QuotesModule,
-    SharedModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

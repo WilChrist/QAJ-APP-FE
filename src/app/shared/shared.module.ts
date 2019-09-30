@@ -1,8 +1,10 @@
-import { CarouselModule } from './carousel/carousel.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MyOwnCustomMaterialModule } from './my-own-custom-material/my-own-custom-material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+
+import { MyOwnCustomMaterialModule } from './my-own-custom-material/my-own-custom-material.module';
+import { CarouselModule } from './carousel/carousel.module';
+import { LanguagesListModule } from './languages-list/languages-list.module';
 
 
 
@@ -12,13 +14,15 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CommonModule,
     MyOwnCustomMaterialModule,
     FlexLayoutModule,
-    CarouselModule
+    CarouselModule,
+    LanguagesListModule
   ],
   exports: [
     CommonModule,
     MyOwnCustomMaterialModule,
     FlexLayoutModule,
-    CarouselModule
+    CarouselModule,
+    LanguagesListModule
   ]
 })
 export class SharedModule { }
