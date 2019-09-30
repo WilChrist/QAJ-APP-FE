@@ -76,8 +76,9 @@ export class CarouselComponent implements OnInit {
     },
     {
       id: 5,
-      content: `\"Outside of the cross of Jesus Christ, there is no hope in this world. That cross and resurrection at the core of the Gospel
-      is the only hope for humanity. Wherever you go, ask God for wisdom on how to get that Gospel in,
+      content: `\"Outside of the cross of Jesus Christ, there is no hope in this world.
+       That cross and resurrection at the core of the Gospel is the only hope for humanity.
+        Wherever you go, ask God for wisdom on how to get that Gospel in,
         even in the toughest situations of life.\"`,
       link_to_the_source: `https://www.christianpost.com/news
       /ravi-zacharias-to-liberty-univ-graduates-draw-the-right-lines-in-life-find-your-definitions-in-god.html`,
