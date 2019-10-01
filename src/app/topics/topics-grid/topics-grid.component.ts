@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ITopic } from '../topics.component';
 
 @Component({
   selector: 'app-topics-grid',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./topics-grid.component.css']
 })
 export class TopicsGridComponent implements OnInit {
-
+  @Input() topics: ITopic[];
   constructor() { }
 
   ngOnInit() {

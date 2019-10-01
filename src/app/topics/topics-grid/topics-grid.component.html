@@ -1,1 +1,43 @@
-<p>topics-grid works!</p>
+<div class="row">
+  <div *ngFor="let topic of topics" class="col s12 m6 l4 xl3">
+    <mat-card class="topic-card" *ngIf="topic!=null">
+      <mat-card-header>
+        <img mat-card-avatar class="topic-image" src="https://source.unsplash.com/collection/789734/100x10{{topic.id}}"/>
+        <mat-card-title>{{ topic.name }}</mat-card-title>
+        <mat-card-subtitle ><i>{{ topic.description }}</i></mat-card-subtitle>
+        <button mat-icon-button color="primary" aria-label="button for viewing details of this topic" class="alignRight" matTooltip="details">
+            <mat-icon [routerLink]="['/topics', topic.id, 'details']">pageview</mat-icon>
+          </button>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-actions>
+        <button
+          mat-flat-button
+          color="primary"
+          aria-label="Thumbs up button for like"
+        >
+          <mat-icon>thumb_up</mat-icon>
+        </button>
+        <button
+          mat-flat-button
+          color="warn"
+          aria-label="Thumbs down button for dislike"
+        >
+          <mat-icon>thumb_down</mat-icon>
+        </button>
+        <button mat-flat-button color="accent" aria-label="button for sharing">
+          <mat-icon>share</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" aria-label="button for reporting a problem with this topic" class="alignRight" matTooltip="report">
+            <mat-icon>info</mat-icon>
+          </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+<div>
+  <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]">
+  </mat-paginator>
+</div>

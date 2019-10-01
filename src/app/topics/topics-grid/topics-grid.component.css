@@ -1,0 +1,18 @@
+.topic-card {
+  margin: 2%;
+}
+
+.topic-image {
+  background-size: cover;
+}
+button {
+  margin: 2px;
+}
+p {
+  padding-top: 3%;
+  font-style: italic;
+}
+.alignRight {
+  position: absolute;
+  right: 0px;
+}

@@ -1,1 +1,31 @@
-<p>topics works!</p>
+<section>
+  <mat-toolbar color="accent">
+    <mat-toolbar-row>
+      <h1>Topics</h1>
+      <span class="fill-remaining-space"></span>
+      <button
+        mat-icon-button
+        aria-label="button for displaying in Grid mode"
+        matTooltip="Grid Mode"
+        (click)="changeDisplayMode(displayModeEnum.Grid)"
+        [class.active]="displayMode === displayModeEnum.Grid"
+        [disabled]="displayMode === displayModeEnum.Grid"
+      >
+        <mat-icon>view_comfy</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        aria-label="button for displaying in List mode"
+        matTooltip="List Mode"
+        (click)="changeDisplayMode(displayModeEnum.List)"
+        [class.active]="displayMode === displayModeEnum.List"
+        [disabled]="displayMode === displayModeEnum.List"
+      >
+        <mat-icon>list</mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <app-topics-grid [topics]="topics" [hidden]="displayMode !== displayModeEnum.Grid"> </app-topics-grid>
+  <app-topics-list [topics]="topics" [hidden]="displayMode !== displayModeEnum.List"> </app-topics-list>
+</section>
