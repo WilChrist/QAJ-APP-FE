@@ -15,3 +15,13 @@ aside.ads {
   background-color:rgba(63, 81, 181, .1);
   cursor: not-allowed;
 }
+.reduceWidth {
+  margin-right: 1%;
+}
+
+@media (max-width: 767px){
+    .reduceWidth {
+      margin-right: 1%;
+      width: 50%;
+  }
+}

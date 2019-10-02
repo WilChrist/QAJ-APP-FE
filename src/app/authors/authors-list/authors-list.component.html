@@ -24,7 +24,7 @@
   <ng-container matColumnDef="popular_name">
     <th mat-header-cell *matHeaderCellDef mat-sort-header class="mmedium center hauthor"> Name and Picture </th>
     <td mat-cell *matCellDef="let author" class="center mmedium">
-      <img mat-card-avatar src="{{author.image_url}}" alt="Picture of {{author.popular_name}}" matBadge="22" matBadgePosition="above after">
+      <img mat-card-avatar src="{{author.image_url}}" alt="Picture of {{author.popular_name}}">
        <button mat-button class="fixWidth"><p class="pblock-ellipsis">{{author.popular_name}}</p></button>
     </td>
   </ng-container>
