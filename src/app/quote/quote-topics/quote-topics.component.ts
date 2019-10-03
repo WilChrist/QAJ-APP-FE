@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ITopic } from 'src/app/topics/topics.component';
 
 @Component({
   selector: 'app-quote-topics',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quote-topics.component.css']
 })
 export class QuoteTopicsComponent implements OnInit {
-
+  @Input() topics: ITopic[];
   constructor() { }
 
   ngOnInit() {

@@ -1,1 +1,38 @@
-<p>author-details works!</p>
+<mat-card class="author-card" *ngIf="author!=null">
+    <mat-card-header>
+      <mat-card-title>{{ author.popular_name }}</mat-card-title>
+      <mat-card-subtitle >Full name: <i>{{ author.full_name }}</i></mat-card-subtitle>
+      <button mat-icon-button color="primary" aria-label="button to go to the full biography of this author" class="alignRight" matTooltip="full biography">
+          <a href="{{ author.link_to_full_biography}}" target="_blank"><mat-icon>link</mat-icon></a>
+        </button>
+    </mat-card-header>
+    <img mat-card-image src="{{author.image_url}}" alt="Photo of {{ author.full_name }}">
+    <mat-card-content>
+      <p>
+        {{author.biography}}
+      </p>
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-card-actions>
+      <button
+        mat-flat-button
+        color="primary"
+        aria-label="Thumbs up button for like"
+      >
+        <mat-icon>thumb_up</mat-icon>
+      </button>
+      <button
+        mat-flat-button
+        color="warn"
+        aria-label="Thumbs down button for dislike"
+      >
+        <mat-icon>thumb_down</mat-icon>
+      </button>
+      <button mat-flat-button color="accent" aria-label="button for sharing">
+        <mat-icon>share</mat-icon>
+      </button>
+      <button mat-icon-button color="warn" aria-label="button for reporting a problem with this author" class="alignRight" matTooltip="report">
+          <mat-icon>info</mat-icon>
+        </button>
+    </mat-card-actions>
+  </mat-card>

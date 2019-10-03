@@ -1,1 +1,38 @@
-<p>quote-details works!</p>
+<mat-card class="quote-details-card" *ngIf="quote!=null">
+  <mat-card-title-group>
+    <img mat-card-md-image class="quote-author-image" src="{{quote.author_img}}" />
+    <mat-card-title>{{ quote.author }}</mat-card-title>
+    <mat-card-subtitle>
+      <i>Topics (Comming soon): </i>
+      <app-quote-topics></app-quote-topics>
+    </mat-card-subtitle>
+    <button mat-icon-button color="primary" aria-label="button to go to the source of this quote" class="alignRight"
+      matTooltip="source">
+      <a href="{{ quote.link_to_the_source}}" target="_blank">
+        <mat-icon>link</mat-icon>
+      </a>
+    </button>
+  </mat-card-title-group>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <p class="flow-text">
+      {{quote.content}}
+    </p>
+  </mat-card-content>
+  <mat-divider></mat-divider>
+  <mat-card-actions>
+    <button mat-flat-button color="primary" aria-label="Thumbs up button for like">
+      <mat-icon>thumb_up</mat-icon>
+    </button>
+    <button mat-flat-button color="warn" aria-label="Thumbs down button for dislike">
+      <mat-icon>thumb_down</mat-icon>
+    </button>
+    <button mat-flat-button color="accent" aria-label="button for sharing">
+      <mat-icon>share</mat-icon>
+    </button>
+    <button mat-icon-button color="warn" aria-label="button for reporting a problem with this quote" class="alignRight"
+      matTooltip="report">
+      <mat-icon>info</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

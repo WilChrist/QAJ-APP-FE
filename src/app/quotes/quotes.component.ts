@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ILanguage } from '../shared/languages-list/languages-list.component';
 import { DisplayModeEnum } from '../shared/helpers/Enums';
 
@@ -144,6 +144,7 @@ const dataL: ILanguage[] = [
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
+  @Input() filteredQuotes: IQuote[];
   quotes: IQuote[];
   languages: ILanguage[];
   displayMode: DisplayModeEnum;
@@ -152,7 +153,7 @@ export class QuotesComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.quotes = dataQ;
+    this.quotes = this.filteredQuotes !== undefined ? this.filteredQuotes : dataQ;
     this.languages = dataL;
     this.displayMode = DisplayModeEnum.Grid;
   }

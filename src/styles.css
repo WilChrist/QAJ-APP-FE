@@ -22,3 +22,7 @@ html, body {
 span.mat-form-field-label-wrapper {
   top: -.4375em;
 }
+.mat-row:hover {
+  background-color: rgba(50,0,100,0.1);
+  cursor: pointer;
+}

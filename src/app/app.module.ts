@@ -10,6 +10,8 @@ import { QuotesModule } from './quotes/quotes.module';
 import { AuthorsModule } from './authors/authors.module';
 import { AppRoutingModule } from './app-routing.module';
 import { TopicsModule } from './topics/topics.module';
+import { QuoteModule } from './quote/quote.module';
+import { AuthorModule } from './author/author.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { TopicsModule } from './topics/topics.module';
     AboutModule,
     TopicsModule,
     AuthorsModule,
+    AuthorModule,
     QuotesModule,
+    QuoteModule,
     AppRoutingModule
   ],
   providers: [],
