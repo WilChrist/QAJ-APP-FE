@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { TopicsModule } from './topics/topics.module';
 import { QuoteModule } from './quote/quote.module';
 import { AuthorModule } from './author/author.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { AuthorModule } from './author/author.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
 
     CoreModule,
     SharedModule,

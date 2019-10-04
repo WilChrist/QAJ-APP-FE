@@ -12,6 +12,9 @@ p {
   padding-top: 3%;
   font-style: italic;
 }
+div.row p{
+  padding: 1%;
+}
 .alignRight {
   position: absolute;
   right: 0px;

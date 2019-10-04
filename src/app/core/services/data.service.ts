@@ -1,13 +1,19 @@
+import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
 import { IAuthor, ILanguage, IQuote, ITopic } from 'src/app/shared/helpers/Interfaces';
 import { allAuthors, allLanguages, allQuotes, allTopics } from 'src/app/data/data';
+import { environment } from './../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  constructor() { }
+  apiBaseUrl = environment.apiBaseUrl;
+
+  constructor(private http: HttpClient) { }
   getAllAuthors(): IAuthor[] {
     return allAuthors;
   }
@@ -30,6 +36,9 @@ export class DataService {
     return allQuotes.filter(q => q.author_id === id);
   }
   getAllTopics(): ITopic[] {
+    // getAllTopics(): Observable<ITopic[]> {
+    /*console.log('fetching topics...');
+    return this.http.get<ITopic[]>(this.toTheUrlOf('categories'));*/
     return allTopics;
   }
   getTopicById(id: number): ITopic {
@@ -40,4 +49,14 @@ export class DataService {
       return q.topic_id === id;
     });
   }*/
+  toTheUrlOf(objectType: string, withId?: number, forAction?: string): string {
+    let url = this.apiBaseUrl + '/api/' + objectType;
+    if (withId !== undefined) {
+      url += '/' + withId;
+      if (forAction !== undefined) {
+        url += '/' + forAction;
+      }
+    }
+    return url;
+  }
 }
