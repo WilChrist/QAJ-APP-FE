@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
-import { ITopic } from '../topics.component';
 import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
+import { ITopic } from 'src/app/shared/helpers/Interfaces';
+
 
 @Component({
   selector: 'app-topics-list',

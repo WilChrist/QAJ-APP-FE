@@ -25,3 +25,10 @@ export interface IQuote {
   language_id: number;
   user_id: number;
 }
+export interface ITopic {
+  id: number;
+  name: string;
+  description: string;
+  created_at: string;
+  updated_at: string;
+}

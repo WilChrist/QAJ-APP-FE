@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ITopic } from '../topics.component';
+import { ITopic } from 'src/app/shared/helpers/Interfaces';
 
 @Component({
   selector: 'app-topics-grid',

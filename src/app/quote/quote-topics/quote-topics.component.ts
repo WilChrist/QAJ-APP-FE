@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ITopic } from 'src/app/topics/topics.component';
+import { ITopic } from 'src/app/shared/helpers/Interfaces';
+
 
 @Component({
   selector: 'app-quote-topics',

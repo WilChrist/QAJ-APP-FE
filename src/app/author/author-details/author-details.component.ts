@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { IAuthor } from 'src/app/shared/helpers/Interfaces';
 
-
 @Component({
   selector: 'app-author-details',
   templateUrl: './author-details.component.html',
