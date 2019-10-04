@@ -192,13 +192,14 @@ export class AuthorComponent implements OnInit {
   constructor(private router: Router , private route: ActivatedRoute) { }
 
   ngOnInit() {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.author = this.getAuthorById(id);
-    if (this.author === undefined) {
-      this.navigateTo404();
-    }
-
-    this.quotes = this.getQuotesByAuthorId(id);
+    this.route.paramMap.subscribe(params => {
+      const id = +params.get('id');
+      this.author = this.getAuthorById(id);
+      if (this.author === undefined) {
+        this.navigateTo404();
+      }
+      this.quotes = this.getQuotesByAuthorId(id);
+    });
   }
   getAuthorById(id: number): IAuthor {
     return dataA.find((a) => {
