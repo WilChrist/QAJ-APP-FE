@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IQuote } from '../quotes/quotes.component';
 import { ILanguage } from '../shared/languages-list/languages-list.component';
+import { ActivatedRoute } from '@angular/router';
 
 const dataQ: IQuote[] = [
   {
@@ -131,10 +132,11 @@ const dataL: ILanguage[] = [
 })
 export class QuoteComponent implements OnInit {
   quote: IQuote;
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.quote = this.getQuoteById(4);
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.quote = this.getQuoteById(id);
   }
 
   getQuoteById(id: number): IQuote {

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ILanguage } from '../shared/languages-list/languages-list.component';
 import { IQuote } from '../quotes/quotes.component';
 import { IAuthor } from '../authors/authors.component';
+import { ActivatedRoute } from '@angular/router';
 
 const dataA: IAuthor[] = [
   {
@@ -188,11 +189,12 @@ const dataL: ILanguage[] = [
 export class AuthorComponent implements OnInit {
   author: IAuthor;
   quotes: IQuote[];
-  constructor() { }
+  constructor( private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.author = this.getAuthorById(1);
-    this.quotes = this.getQuotesByAuthorId(1);
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.author = this.getAuthorById(id);
+    this.quotes = this.getQuotesByAuthorId(id);
   }
   getAuthorById(id: number): IAuthor {
     return dataA.find((a) => {
