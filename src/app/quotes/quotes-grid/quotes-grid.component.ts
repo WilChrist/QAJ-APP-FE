@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { IQuote } from '../quotes.component';
+import { IQuote } from 'src/app/shared/helpers/Interfaces';
 
 @Component({
   selector: 'app-quotes-grid',

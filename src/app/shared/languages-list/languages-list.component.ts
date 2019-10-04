@@ -1,10 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { ILanguage } from '../helpers/Interfaces';
 
-export interface ILanguage {
-  id: number;
-  name: string;
-}
 
 @Component({
   selector: 'app-languages-list',

@@ -1,16 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DisplayModeEnum } from '../shared/helpers/Enums';
+import { IAuthor } from '../shared/helpers/Interfaces';
 
-export interface IAuthor {
-  id: number;
-  full_name: string;
-  popular_name: string;
-  biography: string;
-  link_to_full_biography: string;
-  image_url: string;
-  created_at: string;
-  updated_at: string;
-}
+
 const dataA: IAuthor[] = [
   {
     id: 1,

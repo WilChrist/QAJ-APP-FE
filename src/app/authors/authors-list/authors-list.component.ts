@@ -1,6 +1,8 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
-import { IAuthor } from '../authors.component';
 import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
+import { IAuthor } from 'src/app/shared/helpers/Interfaces';
+
+
 
 @Component({
   selector: 'app-authors-list',

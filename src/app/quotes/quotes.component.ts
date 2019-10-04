@@ -1,20 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ILanguage } from '../shared/languages-list/languages-list.component';
 import { DisplayModeEnum } from '../shared/helpers/Enums';
+import { IQuote, ILanguage } from '../shared/helpers/Interfaces';
 
-export interface IQuote {
-  id: number;
-  content: string;
-  link_to_the_source: string;
-  approuved: boolean;
-  created_at: string;
-  updated_at: string;
-  author: string;
-  author_id: number;
-  author_img: string;
-  language_id: number;
-  user_id: number;
-}
 
 const dataQ: IQuote[] = [
   {

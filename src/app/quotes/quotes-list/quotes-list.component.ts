@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
-import { IQuote } from '../quotes.component';
 import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
+import { IQuote } from 'src/app/shared/helpers/Interfaces';
+
 
 @Component({
   selector: 'app-quotes-list',

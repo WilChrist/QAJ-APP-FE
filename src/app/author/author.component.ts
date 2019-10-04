@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ILanguage } from '../shared/languages-list/languages-list.component';
-import { IQuote } from '../quotes/quotes.component';
-import { IAuthor } from '../authors/authors.component';
 import { ActivatedRoute, Router } from '@angular/router';
+
+import { IQuote, IAuthor, ILanguage } from '../shared/helpers/Interfaces';
 
 const dataA: IAuthor[] = [
   {

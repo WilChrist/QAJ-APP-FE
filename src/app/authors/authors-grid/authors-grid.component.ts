@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { IAuthor } from '../authors.component';
+import { IAuthor } from 'src/app/shared/helpers/Interfaces';
 
 @Component({
   selector: 'app-authors-grid',

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IQuote } from '../quotes/quotes.component';
-import { ILanguage } from '../shared/languages-list/languages-list.component';
 import { ActivatedRoute, Router } from '@angular/router';
+import { IQuote, ILanguage } from '../shared/helpers/Interfaces';
 
 const dataQ: IQuote[] = [
   {
