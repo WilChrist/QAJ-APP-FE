@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ILanguage } from '../shared/languages-list/languages-list.component';
 import { IQuote } from '../quotes/quotes.component';
 import { IAuthor } from '../authors/authors.component';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 const dataA: IAuthor[] = [
   {
@@ -189,11 +189,15 @@ const dataL: ILanguage[] = [
 export class AuthorComponent implements OnInit {
   author: IAuthor;
   quotes: IQuote[];
-  constructor( private route: ActivatedRoute) { }
+  constructor(private router: Router , private route: ActivatedRoute) { }
 
   ngOnInit() {
     const id = +this.route.snapshot.paramMap.get('id');
     this.author = this.getAuthorById(id);
+    if (this.author === undefined) {
+      this.navigateTo404();
+    }
+
     this.quotes = this.getQuotesByAuthorId(id);
   }
   getAuthorById(id: number): IAuthor {
@@ -205,5 +209,8 @@ export class AuthorComponent implements OnInit {
     return dataQ.filter((q) => {
       return q.author_id === id;
     });
+  }
+  navigateTo404() {
+    this.router.navigateByUrl('/404');
   }
 }
