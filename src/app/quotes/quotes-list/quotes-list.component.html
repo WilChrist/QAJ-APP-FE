@@ -24,8 +24,8 @@
   <ng-container matColumnDef="author">
     <th mat-header-cell *matHeaderCellDef mat-sort-header class="mmedium center hauthor"> Author </th>
     <td mat-cell *matCellDef="let element" class="center mmedium" >
-      <img mat-card-avatar src="{{element.author_img}}" alt="Picture of {{element.author}}" matBadge="22" matBadgePosition="above after">
-       <button mat-button class="fixWidth"><p class="pblock-ellipsis">{{element.author}}</p></button>
+      <a [routerLink]="['/authors', element.author_id, 'details']"><img mat-card-avatar src="{{element.author_img}}" alt="Picture of {{element.author}}" matBadge="22" matBadgePosition="above after">
+       <button mat-button class="fixWidth"><p class="pblock-ellipsis">{{element.author}}</p></button></a>
     </td>
   </ng-container>
 

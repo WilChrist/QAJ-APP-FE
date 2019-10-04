@@ -1,7 +1,7 @@
 <mat-card class="quote-details-card" *ngIf="quote!=null">
   <mat-card-title-group>
     <img mat-card-md-image class="quote-author-image" src="{{quote.author_img}}" />
-    <mat-card-title>{{ quote.author }}</mat-card-title>
+    <mat-card-title><a [routerLink]="['/authors', quote.author_id, 'details']">{{ quote.author }}</a></mat-card-title>
     <mat-card-subtitle>
       <i>Topics (Comming soon): </i>
       <app-quote-topics></app-quote-topics>
