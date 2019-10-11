@@ -14,8 +14,8 @@ export class DataService {
   apiBaseUrl = environment.apiBaseUrl;
 
   constructor(private http: HttpClient) { }
-  getAllAuthors(): IAuthor[] {
-    return allAuthors;
+  getAllAuthors(): Observable<IAuthor[]> {
+    return this.http.get<IAuthor[]>(this.toTheUrlOf('authors'));
   }
   getAuthorById(id: number): IAuthor {
     return allAuthors.find(a => a.id === id);
@@ -35,11 +35,8 @@ export class DataService {
   getQuotesByAuthorId(id: number): IQuote[] {
     return allQuotes.filter(q => q.author_id === id);
   }
-  getAllTopics(): ITopic[] {
-    // getAllTopics(): Observable<ITopic[]> {
-    /*console.log('fetching topics...');
-    return this.http.get<ITopic[]>(this.toTheUrlOf('categories'));*/
-    return allTopics;
+  getAllTopics(): Observable<ITopic[]> {
+    return this.http.get<ITopic[]>(this.toTheUrlOf('categories'));
   }
   getTopicById(id: number): ITopic {
     return allTopics.find(t => t.id === id);

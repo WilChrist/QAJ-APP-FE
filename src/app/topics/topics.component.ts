@@ -17,12 +17,12 @@ export class TopicsComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    /*this.dataService.getAllTopics().subscribe(
-      (data: ITopic[]) => this.topics = data,
+    this.dataService.getAllTopics().subscribe(
+      (data: any) => this.topics = data.data,
       (error: any) => console.log(error),
       () => console.log('finaly...')
-    );*/
-    this.topics = this.dataService.getAllTopics();
+    );
+    // this.topics = this.dataService.getAllTopics();
     this.displayMode = DisplayModeEnum.Grid;
   }
 

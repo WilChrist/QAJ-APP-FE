@@ -16,7 +16,10 @@ export class AuthorsComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.authors = this.dataService.getAllAuthors();
+    this.dataService.getAllAuthors().subscribe(
+      (data: any) => this.authors = data.data,
+      (error: any) => console.log(error)
+    );
     this.displayMode = DisplayModeEnum.Grid;
   }
 
