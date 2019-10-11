@@ -26,6 +26,6 @@
     </mat-toolbar-row>
   </mat-toolbar>
 
-  <app-topics-grid [topics]="topics" [hidden]="displayMode !== displayModeEnum.Grid"> </app-topics-grid>
-  <app-topics-list [topics]="topics" [hidden]="displayMode !== displayModeEnum.List"> </app-topics-list>
+  <app-topics-grid [topics]="topics" [paginatorConfigurable]="paginatorConfigurable" [hidden]="displayMode !== displayModeEnum.Grid"> </app-topics-grid>
+  <app-topics-list [topics]="topics" [paginatorConfigurable]="paginatorConfigurable" [hidden]="displayMode !== displayModeEnum.List"> </app-topics-list>
 </section>

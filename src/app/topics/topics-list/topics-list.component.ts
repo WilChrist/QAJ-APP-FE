@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
 import { ITopic } from 'src/app/shared/helpers/Interfaces';
+import { PaginatorConfigurable } from 'src/app/shared/helpers/Classes';
 
 
 @Component({
@@ -15,6 +16,7 @@ export class TopicsListComponent implements OnInit {
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
+  @Input() paginatorConfigurable: PaginatorConfigurable;
   displayedColumns: string[];
 
   constructor() { }

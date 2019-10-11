@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ITopic } from 'src/app/shared/helpers/Interfaces';
+import { PaginatorConfigurable } from 'src/app/shared/helpers/Classes';
 
 @Component({
   selector: 'app-topics-grid',
@@ -8,6 +9,7 @@ import { ITopic } from 'src/app/shared/helpers/Interfaces';
 })
 export class TopicsGridComponent implements OnInit {
   @Input() topics: ITopic[];
+  @Input() paginatorConfigurable: PaginatorConfigurable;
   constructor() { }
 
   ngOnInit() {
