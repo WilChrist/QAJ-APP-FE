@@ -33,7 +33,7 @@ export class DataService {
     return allQuotes.find(q => q.id === id);
   }
   getQuotesByAuthorId(id: number): IQuote[] {
-    return allQuotes.filter(q => q.author_id === id);
+    return allQuotes.filter(q => q.author.id === id);
   }
   getAllTopics(): Observable<ITopic[]> {
     return this.http.get<ITopic[]>(this.toTheUrlOf('categories'));
@@ -46,13 +46,13 @@ export class DataService {
       return q.topic_id === id;
     });
   }*/
-  toTheUrlOf(objectType: string, withId?: number, forAction?: string): string {
+  toTheUrlOf(objectType: string, withId?: number, queryParams?: string): string {
     let url = this.apiBaseUrl + '/api/' + objectType;
     if (withId !== undefined) {
       url += '/' + withId;
-      if (forAction !== undefined) {
-        url += '/' + forAction;
-      }
+    }
+    if (queryParams !== undefined) {
+      url += '?' + queryParams;
     }
     return url;
   }

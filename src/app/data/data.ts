@@ -72,9 +72,24 @@ export const allQuotes: IQuote[] = [
     approuved: true,
     created_at: '2019-09-03 07:43:32',
     updated_at: '2019-09-03 07:43:32',
-    author_id: 1,
-    author: 'C. S. Lewis',
-    author_img: 'https://source.unsplash.com/collection/895539/403x403',
+    author: {
+      id: 1,
+      full_name: 'Clive Staples Lewis',
+      popular_name: 'C. S. Lewis',
+      biography: `Clive Staples Lewis was one of the intellectual giants of the twentieth century
+       and arguably one of the most influential writers of his day. He was a Fellow and Tutor in
+       English Literature at Oxford University until 1954. He was unanimously elected to the Chair
+        of Medieval and Renaissance Literature at Cambridge University, a position he held until his
+         retirement. He wrote more than thirty books, allowing him to reach a vast audience, and his
+          works continue to attract thousands of new readers every year. His most distinguished and
+           popular accomplishments include Mere Christianity, Out of the Silent Planet, The Great Divorce,
+            The Screwtape Letters, and the universally acknowledged classics The Chronicles of Narnia.
+             To date, the Narnia books have sold over 100 million copies and been transformed into three major motion pictures.`,
+      link_to_full_biography: 'http://www.cslewis.com/us/about-cs-lewis/',
+      image_url: 'https://source.unsplash.com/collection/895539/403x403',
+      created_at: '2019-09-02 17:02:03',
+      updated_at: '2019-09-02 17:02:03'
+    },
     language_id: 2,
     user_id: 2
   },
@@ -88,9 +103,6 @@ export const allQuotes: IQuote[] = [
     approuved: true,
     created_at: '2019-09-03 09:06:25',
     updated_at: '2019-09-03 09:06:25',
-    author_id: 2,
-    author: 'Ravi Zacharias',
-    author_img: 'https://source.unsplash.com/collection/895539/404x404',
     language_id: 2,
     user_id: 2
   },
@@ -104,9 +116,6 @@ export const allQuotes: IQuote[] = [
     approuved: false,
     created_at: '2019-09-03 09:09:15',
     updated_at: '2019-09-03 09:09:15',
-    author_id: 3,
-    author: 'R. Zacharias',
-    author_img: 'https://source.unsplash.com/collection/895539/405x405',
     language_id: 2,
     user_id: 2
   },
@@ -120,9 +129,6 @@ export const allQuotes: IQuote[] = [
     approuved: true,
     created_at: '2019-09-03 09:06:25',
     updated_at: '2019-09-03 09:06:25',
-    author_id: 2,
-    author: 'Ravi Zacharias',
-    author_img: 'https://source.unsplash.com/collection/895539/404x404',
     language_id: 2,
     user_id: 2
   },
@@ -136,9 +142,6 @@ export const allQuotes: IQuote[] = [
     approuved: false,
     created_at: '2019-09-03 09:09:15',
     updated_at: '2019-09-03 09:09:15',
-    author_id: 3,
-    author: 'R. Zacharias',
-    author_img: 'https://source.unsplash.com/collection/895539/405x405',
     language_id: 2,
     user_id: 2
   },
@@ -158,9 +161,24 @@ export const allQuotes: IQuote[] = [
     approuved: true,
     created_at: '2019-09-03 07:43:32',
     updated_at: '2019-09-03 07:43:32',
-    author_id: 1,
-    author: 'C. S. Lewis',
-    author_img: 'https://source.unsplash.com/collection/895539/403x403',
+    author: {
+      id: 1,
+      full_name: 'Clive Staples Lewis',
+      popular_name: 'C. S. Lewis',
+      biography: `Clive Staples Lewis was one of the intellectual giants of the twentieth century
+       and arguably one of the most influential writers of his day. He was a Fellow and Tutor in
+       English Literature at Oxford University until 1954. He was unanimously elected to the Chair
+        of Medieval and Renaissance Literature at Cambridge University, a position he held until his
+         retirement. He wrote more than thirty books, allowing him to reach a vast audience, and his
+          works continue to attract thousands of new readers every year. His most distinguished and
+           popular accomplishments include Mere Christianity, Out of the Silent Planet, The Great Divorce,
+            The Screwtape Letters, and the universally acknowledged classics The Chronicles of Narnia.
+             To date, the Narnia books have sold over 100 million copies and been transformed into three major motion pictures.`,
+      link_to_full_biography: 'http://www.cslewis.com/us/about-cs-lewis/',
+      image_url: 'https://source.unsplash.com/collection/895539/403x403',
+      created_at: '2019-09-02 17:02:03',
+      updated_at: '2019-09-02 17:02:03'
+    },
     language_id: 2,
     user_id: 2
   }

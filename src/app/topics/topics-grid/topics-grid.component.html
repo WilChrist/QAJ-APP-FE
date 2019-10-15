@@ -1,6 +1,6 @@
 <div class="row">
-  <p class="flow-text" *ngIf="topics==undefined">Nothing to show here for now! Please, come back later.</p>
-  <div *ngFor="let topic of topics" class="col s12 m6 l4 xl3">
+  <p class="flow-text" *ngIf="rawTopics==undefined">Nothing to show here for now! Please, come back later.</p>
+  <div *ngFor="let topic of rawTopics" class="col s12 m6 l4 xl3">
     <mat-card class="topic-card" *ngIf="topic!=null">
       <mat-card-header>
         <img mat-card-avatar class="topic-image" src="https://source.unsplash.com/collection/789734/100x10{{topic.id}}"/>
@@ -38,10 +38,10 @@
 </div>
 <div>
   <mat-paginator
-  [length]="paginatorConfigurable.length"
-  [pageSize]="paginatorConfigurable.pageSize"
-  [pageSizeOptions]="paginatorConfigurable.pageSizeOptions"
-  (page)="paginatorConfigurable.pageEvent = $event"
-  showFirstLastButtons
-></mat-paginator>
+    [length]="paginatorConfigurable.length"
+    [pageSize]="paginatorConfigurable.pageSize"
+    [pageSizeOptions]="paginatorConfigurable.pageSizeOptions"
+    (page)="paginatorConfigurable.pageEvent = $event; onPaginatorChange($event)"
+    showFirstLastButtons
+  ></mat-paginator>
 </div>

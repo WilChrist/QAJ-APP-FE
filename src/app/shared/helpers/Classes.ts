@@ -16,6 +16,10 @@ export class PaginatorConfigurable {
     this.length = length;
     this.pageSize = pageSize;
     this.pageSizeOptions = pageSizeOptions;
+    this.pageEvent = new PageEvent();
+    this.pageEvent.pageIndex = 0;
+    this.pageEvent.pageSize = pageSize;
+    this.pageEvent.length = length;
    }
 
   setPageSizeOptions(setPageSizeOptionsInput: string) {

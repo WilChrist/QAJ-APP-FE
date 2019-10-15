@@ -3,8 +3,8 @@
   <div *ngFor="let quote of quotes" class="col s12 m6 l4 xl3">
     <mat-card class="quote-card" *ngIf="quote!=null">
       <mat-card-header>
-        <img mat-card-avatar class="quote-author-image" src="{{quote.author_img}}"/>
-        <mat-card-title><a [routerLink]="['/authors', quote.author_id, 'details']">{{ quote.author }}</a></mat-card-title>
+        <img mat-card-avatar class="quote-author-image" src="{{quote.author.image_url}}"/>
+        <mat-card-title><a [routerLink]="['/authors', quote.author.id, 'details']">{{ quote.author.popular_name }}</a></mat-card-title>
         <mat-card-subtitle >{{ quote.created_at }}</mat-card-subtitle>
         <button mat-icon-button color="primary" aria-label="button for viewing details of this quote" class="alignRight" matTooltip="details">
             <mat-icon [routerLink]="['/quotes', quote.id, 'details']">pageview</mat-icon>

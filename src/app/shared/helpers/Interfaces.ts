@@ -7,6 +7,8 @@ export interface IAuthor {
   image_url: string;
   created_at: string;
   updated_at: string;
+
+  quotes?: IQuote[];
 }
 export interface ILanguage {
   id: number;
@@ -19,11 +21,12 @@ export interface IQuote {
   approuved: boolean;
   created_at: string;
   updated_at: string;
-  author: string;
-  author_id: number;
-  author_img: string;
   language_id: number;
   user_id: number;
+
+  author?: IAuthor;
+  topics?: ITopic[];
+  language?: ILanguage;
 }
 export interface ITopic {
   id: number;
@@ -31,4 +34,6 @@ export interface ITopic {
   description: string;
   created_at: string;
   updated_at: string;
+
+  quotes?: IQuote[];
 }
