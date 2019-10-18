@@ -1,4 +1,4 @@
-import { NgModule, Optional, SkipSelf } from '@angular/core';
+import { NgModule, Optional, SkipSelf, ErrorHandler } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -9,6 +9,10 @@ import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { FooterComponent } from './navigation/footer/footer.component';
 import { NotFoundComponent } from './navigation/error-pages/not-found/not-found.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AddHeaderInterceptor } from './interceptors/add-header.interceptor';
+import { LogResponseInterceptor } from './interceptors/log-response.interceptor';
+import { CacheInterceptor } from './interceptors/cache.interceptor';
 
 
 
@@ -20,6 +24,11 @@ import { NotFoundComponent } from './navigation/error-pages/not-found/not-found.
 
     MyOwnCustomMaterialModule,
     FlexLayoutModule
+  ],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: AddHeaderInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: LogResponseInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: CacheInterceptor, multi: true}
   ],
   exports: [
     RouterModule,

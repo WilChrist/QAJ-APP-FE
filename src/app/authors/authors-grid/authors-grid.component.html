@@ -3,7 +3,7 @@
     <div *ngFor="let author of authors" class="col s12 m6 l4 xl3">
       <mat-card class="author-card" *ngIf="author!=null">
         <mat-card-header>
-          <img mat-card-avatar class="author-image" src="{{author.image_url}}"/>
+          <img mat-card-avatar class="author-image" src="{{apiBaseUrl}}{{author.image_url}}"/>
           <mat-card-title>{{ author.popular_name }}</mat-card-title>
           <mat-card-subtitle >Full name: <i>{{ author.full_name }}</i></mat-card-subtitle>
           <button mat-icon-button color="primary" aria-label="button for viewing details of this author" class="alignRight" matTooltip="details">

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DisplayModeEnum } from '../shared/helpers/Enums';
 import { ITopic } from '../shared/helpers/Interfaces';
 import { DataService } from './../core/services/data.service';
-import { PaginatorConfigurable } from '../shared/helpers/Classes';
+import { PaginatorConfigurable, SimpleError } from '../shared/helpers/Classes';
 import { PageEvent } from '@angular/material';
 
 @Component({
@@ -17,9 +17,6 @@ export class TopicsComponent implements OnInit {
   paginatorConfigurable: PaginatorConfigurable;
   displayModeEnum = DisplayModeEnum;
 
-  // MatPaginator Output
-  pageEvent: PageEvent;
-
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
@@ -33,7 +30,7 @@ export class TopicsComponent implements OnInit {
           [2, 4, 8, 12, 24, 48, 96]
         );
       },
-      (error: any) => console.log(error),
+      (error: SimpleError) => console.log(error.errorNumber + ' / ' + error.userFriendlyMessage + ' / ' + error.message),
       () => console.log('finaly...')
     );
     // this.topics = this.dataService.getAllTopics();

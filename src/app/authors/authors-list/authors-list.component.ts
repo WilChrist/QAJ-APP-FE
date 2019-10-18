@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
 import { IAuthor } from 'src/app/shared/helpers/Interfaces';
+import { environment } from 'src/environments/environment';
 
 
 
@@ -11,6 +12,7 @@ import { IAuthor } from 'src/app/shared/helpers/Interfaces';
 })
 export class AuthorsListComponent implements OnInit {
   @Input() authors: IAuthor[];
+  apiBaseUrl = environment.apiBaseUrl;
   dataSource: MatTableDataSource<IAuthor>;
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;

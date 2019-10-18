@@ -3,6 +3,16 @@ import { PageEvent } from '@angular/material';
 export class Helper {
 
 }
+export class SimpleError {
+  constructor(errorNumber?: number, message?: string, userFriendlyMessage?: string) {
+    this.errorNumber = errorNumber;
+    this.message = message;
+    this.userFriendlyMessage = userFriendlyMessage;
+  }
+  errorNumber: number;
+  message: string;
+  userFriendlyMessage: string;
+}
 export class PaginatorConfigurable {
   // MatPaginator Inputs
   length: number;

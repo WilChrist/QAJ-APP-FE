@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { IAuthor } from 'src/app/shared/helpers/Interfaces';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-authors-grid',
@@ -8,6 +9,7 @@ import { IAuthor } from 'src/app/shared/helpers/Interfaces';
 })
 export class AuthorsGridComponent implements OnInit {
   @Input() authors: IAuthor[];
+  apiBaseUrl = environment.apiBaseUrl;
   constructor() { }
 
   ngOnInit() {

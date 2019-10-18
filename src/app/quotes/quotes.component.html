@@ -27,6 +27,6 @@
     </mat-toolbar-row>
   </mat-toolbar>
 
-  <app-quotes-grid [quotes]="quotes" [hidden]="displayMode !== displayModeEnum.Grid"> </app-quotes-grid>
-  <app-quotes-list [quotes]="quotes" [hidden]="displayMode !== displayModeEnum.List"> </app-quotes-list>
+  <app-quotes-grid [quotes]="quotes" [paginatorConfigurable]="paginatorConfigurable" [hidden]="displayMode !== displayModeEnum.Grid"> </app-quotes-grid>
+  <app-quotes-list [quotes]="quotes" [paginatorConfigurable]="paginatorConfigurable" [hidden]="displayMode !== displayModeEnum.List"> </app-quotes-list>
 </section>
