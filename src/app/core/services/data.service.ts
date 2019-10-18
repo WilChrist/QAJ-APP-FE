@@ -22,8 +22,11 @@ export class DataService {
       catchError(err => this.handleHttpError(err))
     );
   }
-  getAuthorById(id: number): IAuthor {
-    return allAuthors.find(a => a.id === id);
+  getAuthorById(id: number): Observable<IAuthor | SimpleError> {
+    return this.http.get<IAuthor>(this.toTheUrlOf('authors', id))
+    .pipe(
+      catchError(err => this.handleHttpError(err))
+    );
   }
   getAllLanguages(): Observable<ILanguage[] | SimpleError>  {
     return this.http.get<ILanguage[]>(this.toTheUrlOf('languages'))

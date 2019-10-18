@@ -17,7 +17,11 @@ export class AuthorComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       const id = +params.get('id');
-      this.author = this.dataService.getAuthorById(id);
+      this.dataService.getAuthorById(id).subscribe(
+        (data: any) => {
+          this.author = data.data;
+          }
+      );
       if (this.author === undefined) {
         this.navigateTo404();
       }

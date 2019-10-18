@@ -6,7 +6,7 @@
           <a href="{{ author.link_to_full_biography}}" target="_blank"><mat-icon>link</mat-icon></a>
         </button>
     </mat-card-header>
-    <img mat-card-image src="{{author.image_url}}" alt="Photo of {{ author.full_name }}">
+    <img mat-card-image src="{{apiBaseUrl}}{{author.image_url}}" alt="Photo of {{ author.full_name }}">
     <mat-card-content>
       <p>
         {{author.biography}}
