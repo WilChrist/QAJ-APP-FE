@@ -5,7 +5,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { IAuthor, ILanguage, IQuote, ITopic } from 'src/app/shared/helpers/Interfaces';
 import { allAuthors, allLanguages, allQuotes, allTopics } from 'src/app/data/data';
 import { environment } from './../../../environments/environment';
-import { catchError } from 'rxjs/operators';
+import { catchError, map, tap } from 'rxjs/operators';
 import { SimpleError } from 'src/app/shared/helpers/Classes';
 
 @Injectable({
@@ -43,8 +43,11 @@ export class DataService {
   getQuoteById(id: number): IQuote {
     return allQuotes.find(q => q.id === id);
   }
-  getQuotesByAuthorId(id: number): IQuote[] {
-    return allQuotes.filter(q => q.author.id === id);
+  getQuotesByAuthorId(id: number): Observable<IAuthor | SimpleError> {
+    return this.http.get<IAuthor>(this.toTheUrlOf('authors', id, 'include=quotes'))
+    .pipe(
+      catchError(err => this.handleHttpError(err))
+    );
   }
   getAllTopics(): Observable<ITopic[] | SimpleError> {
     return this.http.get<ITopic[]>(this.toTheUrlOf('categories'))

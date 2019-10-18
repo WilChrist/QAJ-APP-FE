@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, OnChanges, SimpleChanges } from '@angular/core';
 import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
 import { IQuote } from 'src/app/shared/helpers/Interfaces';
 import { environment } from 'src/environments/environment';
@@ -29,7 +29,7 @@ export class QuotesListComponent implements OnInit, OnChanges {
     this.displayedColumns = ['id', 'content', 'author'];
   }
 
-  ngOnChanges(changes: import('@angular/core').SimpleChanges): void {
+  ngOnChanges(changes: SimpleChanges): void {
     this.dataSource = new MatTableDataSource(this.quotes);
     this.dataSource.sort = this.sort;
 
