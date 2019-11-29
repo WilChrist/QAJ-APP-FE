@@ -20,11 +20,12 @@ export class AuthorComponent implements OnInit {
       this.dataService.getAuthorById(id).subscribe(
         (data: any) => {
           this.author = data.data;
+          if (this.author === undefined) {
+            this.navigateTo404();
           }
+        }
       );
-      if (this.author === undefined) {
-        this.navigateTo404();
-      }
+
       this.dataService.getQuotesByAuthorId(id).subscribe(
         (data: any) => {
           this.quotes = data.data.quotes;

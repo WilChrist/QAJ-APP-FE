@@ -43,8 +43,11 @@ export class DataService {
       catchError(err => this.handleHttpError(err))
     );
   }
-  getQuoteById(id: number): IQuote {
-    return allQuotes.find(q => q.id === id);
+  getQuoteById(id: number): Observable<IQuote | SimpleError> {
+    return this.http.get<IQuote>(this.toTheUrlOf('quotes', id, 'include=author'))
+    .pipe(
+      catchError(err => this.handleHttpError(err))
+    );
   }
   getQuotesByAuthorId(id: number): Observable<IAuthor | SimpleError> {
     return this.http.get<IAuthor>(this.toTheUrlOf('authors', id, 'include=quotes'))

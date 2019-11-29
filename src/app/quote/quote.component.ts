@@ -14,11 +14,17 @@ export class QuoteComponent implements OnInit {
   constructor(private dataService: DataService , private router: Router , private route: ActivatedRoute) { }
 
   ngOnInit() {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.quote = this.dataService.getQuoteById(id);
-    if (this.quote === undefined) {
-      this.navigateTo404();
-    }
+    this.route.paramMap.subscribe(params => {
+      const id = +params.get('id');
+      this.dataService.getQuoteById(id).subscribe(
+        (data: any) => {
+          this.quote = data.data;
+          if (this.quote === undefined) {
+            this.navigateTo404();
+          }
+        }
+      );
+    });
   }
 
   navigateTo404() {

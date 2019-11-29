@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { IQuote } from 'src/app/shared/helpers/Interfaces';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-quote-details',
@@ -8,6 +9,7 @@ import { IQuote } from 'src/app/shared/helpers/Interfaces';
 })
 export class QuoteDetailsComponent implements OnInit {
   @Input() quote: IQuote;
+  apiBaseUrl = environment.apiBaseUrl;
   constructor() { }
 
   ngOnInit() {
