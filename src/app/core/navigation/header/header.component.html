@@ -4,13 +4,25 @@
     <span class="fill-remaining-space"></span>
 
     <div fxShow="true" fxHide.lt-md="true">
-      <!-- The following menu items will be hidden on both SM and XS screen sizes -->
-      <ul fxLayout fxLayoutGap="20px" class="navigation-items">
-          <li> <a mat-button routerLinkActive="active" [routerLink]="['/quotes']"> <mat-icon>format_quote</mat-icon> Quotes </a> </li>
-          <li> <a mat-button routerLinkActive="active" [routerLink]="['/authors']"> <mat-icon>people</mat-icon> Authors </a> </li>
-          <li> <a mat-button routerLinkActive="active" [routerLink]="['/topics']"> <mat-icon>category</mat-icon> Topics </a> </li>
-          <li> <a mat-button routerLinkActive="active" [routerLink]="['/about']"> <mat-icon>info</mat-icon> About </a> </li>
-      </ul>
+        <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+        <ul fxLayout fxLayoutGap="20px" class="navigation-items">
+            <li>
+                <a mat-button routerLinkActive="active" [routerLink]="['/quotes']">
+                    <mat-icon>format_quote</mat-icon> Quotes </a>
+            </li>
+            <li>
+                <a mat-button routerLinkActive="active" [routerLink]="['/authors']">
+                    <mat-icon>people</mat-icon> Authors </a>
+            </li>
+            <li>
+                <a mat-button routerLinkActive="active" [routerLink]="['/topics']">
+                    <mat-icon>category</mat-icon> Topics </a>
+            </li>
+            <li>
+                <a mat-button routerLinkActive="active" [routerLink]="['/about']">
+                    <mat-icon>info</mat-icon> About </a>
+            </li>
+        </ul>
     </div>
 
     <div fxShow="true" fxHide.gt-sm="true">
