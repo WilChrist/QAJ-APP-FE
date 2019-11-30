@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="810d9dd81d84be535a7940abdb4a3739e55f3337" datatype="html">
+        <source>Quotes About Jesus</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation/header/header.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description"> Name of the site</note>
+        <note priority="1" from="meaning">Site title </note>
+      </trans-unit>
+      <trans-unit id="7a29b6e0c3cfd5d5d5252f1f5261f2637002b828" datatype="html">
+        <source>
+                    <x id="START_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;mat-icon&gt;"/>format_quote<x id="CLOSE_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;/mat-icon&gt;"/> Quotes </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation/header/header.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description"> Link to quotes</note>
+        <note priority="1" from="meaning">Quotes link </note>
+      </trans-unit>
+      <trans-unit id="70c059f224276234cbbf7a976559b14a0791d261" datatype="html">
+        <source>
+                    <x id="START_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;mat-icon&gt;"/>people<x id="CLOSE_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;/mat-icon&gt;"/> Authors </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation/header/header.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description"> Link to authors</note>
+        <note priority="1" from="meaning">Authors link </note>
+      </trans-unit>
+      <trans-unit id="62e88ef22e79600f7180cfb870138397aa54d135" datatype="html">
+        <source>
+                    <x id="START_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;mat-icon&gt;"/>category<x id="CLOSE_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;/mat-icon&gt;"/> Topics </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation/header/header.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description"> Link to topics</note>
+        <note priority="1" from="meaning">Topics link </note>
+      </trans-unit>
+      <trans-unit id="89c4f33cbb389a795b85ff261d14204630970a13" datatype="html">
+        <source>
+                    <x id="START_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;mat-icon&gt;"/>info<x id="CLOSE_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;/mat-icon&gt;"/> About </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation/header/header.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description"> Link to about</note>
+        <note priority="1" from="meaning">About link </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
