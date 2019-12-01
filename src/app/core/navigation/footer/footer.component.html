@@ -1,36 +1,36 @@
 <footer>
-  <mat-toolbar color="primary">
-    <mat-toolbar-row class="foot">
-      <div class="row">
-        <div class="col s12 m6 l4">
-          <h3 class="mat-h3">Quotes About Jesus</h3>
-          <p class="mat-body">Because he is <br>the most interresting <br>person this world ever known!</p>
-        </div>
-        <div class="col s12 m6 l4">
-          <h4 class="mat-h4">Legal</h4>
-          <ul class="navigation-items">
-            <li class="mat-body">About</li>
-            <li class="mat-body">Privacy Policy</li>
-            <li class="mat-body">Terms & Conditions</li>
-          </ul>
-        </div>
-        <div class="col s12 m6 l4">
-          <h4 class="mat-h4">Social</h4>
-          <button mat-icon-button aria-label="button for going on the creator facebook profil" class="alignRight">
+    <mat-toolbar color="primary">
+        <mat-toolbar-row class="foot">
+            <div class="row">
+                <div class="col s12 m6 l4">
+                    <h3 class="mat-h3" i18n='Site title | Name of the site@@site-header'>Quotes About Jesus</h3>
+                    <p class="mat-body" i18n='footer paragraph|footer paragraph@@footer-paragraph'>Because he is <br>the most interresting <br>person this world ever known!</p>
+                </div>
+                <div class="col s12 m6 l4">
+                    <h4 class="mat-h4" i18n='Legal sub-heading|Legal section@@legal-sub-heading'>Legal</h4>
+                    <ul class="navigation-items">
+                        <li class="mat-body" i18n='Footer about link|footer link to about@@footer-about-link'>About</li>
+                        <li class="mat-body" i18n='Privacy policy link|Link to Privacy policy@@privacy-policy-link'>Privacy Policy</li>
+                        <li class="mat-body" i18n='Terms-and-conditions link|Link to Terms-and-conditions@@terms-and-conditions-link'>Terms & Conditions</li>
+                    </ul>
+                </div>
+                <div class="col s12 m6 l4">
+                    <h4 class="mat-h4" i18n='Social sub-heading|social section@@social-sub-heading'>Social</h4>
+                    <button mat-icon-button aria-label="button for going on the creator facebook profil" class="alignRight">
             <mat-icon>facebook</mat-icon>
           </button>
-          <button mat-icon-button aria-label="button for going on the creator linkedin profil" class="alignRight">
+                    <button mat-icon-button aria-label="button for going on the creator linkedin profil" class="alignRight">
             <mat-icon>linkedin</mat-icon>
           </button>
-          <button mat-icon-button aria-label="button for going on the creator github profil" class="alignRight">
+                    <button mat-icon-button aria-label="button for going on the creator github profil" class="alignRight">
             <mat-icon>github</mat-icon>
           </button>
-        </div>
-      </div>
-    </mat-toolbar-row>
+                </div>
+            </div>
+        </mat-toolbar-row>
 
-    <mat-toolbar-row class="mat-elevation-z8">
-      <p class="mat-body center">&copy; Copyright {{today | date:"yyyy"}} Willy Nzesseu, All rights reserved</p>
-    </mat-toolbar-row>
-  </mat-toolbar>
+        <mat-toolbar-row class="mat-elevation-z8">
+            <p class="mat-body center" i18n='copy-right|copy-right section of footer@@copy-right'>&copy; Copyright {{today | date:"yyyy"}} Willy Nzesseu, All rights reserved</p>
+        </mat-toolbar-row>
+    </mat-toolbar>
 </footer>
