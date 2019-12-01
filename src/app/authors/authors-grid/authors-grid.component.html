@@ -1,53 +1,39 @@
 <div class="row">
-    <p class="flow-text" *ngIf="paginatedAuthors==undefined">Nothing to show here for now! Please, come back later.</p>
+    <p class="flow-text" *ngIf="paginatedAuthors==undefined" i18n='No results|No results avilable text@@no-results-available'>Nothing to show here for now! Please, come back later.</p>
     <div *ngFor="let author of paginatedAuthors" class="col s12 m6 l4 xl3">
-      <mat-card class="author-card" *ngIf="author!=null">
-        <mat-card-header>
-          <img mat-card-avatar class="author-image" src="{{apiBaseUrl}}{{author.image_url}}"/>
-          <mat-card-title>{{ author.popular_name }}</mat-card-title>
-          <mat-card-subtitle >Full name: <i>{{ author.full_name }}</i></mat-card-subtitle>
-          <button mat-icon-button color="primary" aria-label="button for viewing details of this author" class="alignRight" matTooltip="details">
+        <mat-card class="author-card" *ngIf="author!=null">
+            <mat-card-header>
+                <img mat-card-avatar class="author-image" src="{{apiBaseUrl}}{{author.image_url}}" />
+                <mat-card-title>{{ author.popular_name }}</mat-card-title>
+                <mat-card-subtitle>Full name: <i>{{ author.full_name }}</i></mat-card-subtitle>
+                <button mat-icon-button color="primary" aria-label="button for viewing details of this author" class="alignRight" matTooltip="details">
               <mat-icon [routerLink]="['/authors', author.id, 'details']">pageview</mat-icon>
             </button>
-        </mat-card-header>
-        <mat-divider></mat-divider>
-        <mat-card-content>
-          <p>
-            {{author.biography}}
-          </p>
-        </mat-card-content>
-        <mat-divider></mat-divider>
-        <mat-card-actions>
-          <button
-            mat-flat-button
-            color="primary"
-            aria-label="Thumbs up button for like"
-          >
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <p>
+                    {{author.biography}}
+                </p>
+            </mat-card-content>
+            <mat-divider></mat-divider>
+            <mat-card-actions>
+                <button mat-flat-button color="primary" aria-label="Thumbs up button for like">
             <mat-icon>thumb_up</mat-icon>
           </button>
-          <button
-            mat-flat-button
-            color="warn"
-            aria-label="Thumbs down button for dislike"
-          >
+                <button mat-flat-button color="warn" aria-label="Thumbs down button for dislike">
             <mat-icon>thumb_down</mat-icon>
           </button>
-          <button mat-flat-button color="accent" aria-label="button for sharing">
+                <button mat-flat-button color="accent" aria-label="button for sharing">
             <mat-icon>share</mat-icon>
           </button>
-          <button mat-icon-button color="warn" aria-label="button for reporting a problem with this author" class="alignRight" matTooltip="report">
+                <button mat-icon-button color="warn" aria-label="button for reporting a problem with this author" class="alignRight" matTooltip="report">
               <mat-icon>info</mat-icon>
             </button>
-        </mat-card-actions>
-      </mat-card>
+            </mat-card-actions>
+        </mat-card>
     </div>
-  </div>
-  <div>
-    <mat-paginator
-    [length]="paginatorConfigurable.length"
-    [pageSize]="paginatorConfigurable.pageSize"
-    [pageSizeOptions]="paginatorConfigurable.pageSizeOptions"
-    (page)="paginatorConfigurable.pageEvent = $event; onPaginatorChange($event)"
-    showFirstLastButtons
-  ></mat-paginator>
-  </div>
+</div>
+<div>
+    <mat-paginator [length]="paginatorConfigurable.length" [pageSize]="paginatorConfigurable.pageSize" [pageSizeOptions]="paginatorConfigurable.pageSizeOptions" (page)="paginatorConfigurable.pageEvent = $event; onPaginatorChange($event)" showFirstLastButtons></mat-paginator>
+</div>

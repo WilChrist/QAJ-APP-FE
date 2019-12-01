@@ -135,6 +135,66 @@
         <note priority="1" from="description">copy-right section of footer</note>
         <note priority="1" from="meaning">copy-right</note>
       </trans-unit>
+      <trans-unit id="quotes-section-header" datatype="html">
+        <source>Quotes</source>
+        <target>Citations</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/quotes/quotes.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Header for the quotes section</note>
+        <note priority="1" from="meaning">Quotes section header</note>
+      </trans-unit>
+      <trans-unit id="topics-section-header" datatype="html">
+        <source>Topics (Development paused)</source>
+        <target>Sujets (développement suspendu)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/topics/topics.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Header for the topics section</note>
+        <note priority="1" from="meaning">Topics section header</note>
+      </trans-unit>
+      <trans-unit id="no-results-available" datatype="html">
+        <source>Nothing to show here for now! Please, come back later.</source>
+        <target>Rien à montrer ici pour l'instant! Merci de revenir plus tard.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/topics/topics-grid/topics-grid.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/topics/topics-list/topics-list.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/authors/authors-grid/authors-grid.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/authors/authors-list/authors-list.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/quotes/quotes-grid/quotes-grid.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/quotes/quotes-list/quotes-list.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">No results avilable text</note>
+        <note priority="1" from="meaning">No results</note>
+      </trans-unit>
+      <trans-unit id="authors-section-header" datatype="html">
+        <source>Authors</source>
+        <target>Auteurs</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/authors/authors.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Header for the authors section</note>
+        <note priority="1" from="meaning">Authors section header</note>
+      </trans-unit>
     </body>
   </file>
 </xliff>
