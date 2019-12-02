@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="site-header" datatype="html">
+        <source>Quotes About Jesus</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation/header/header.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation/footer/footer.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description"> Name of the site</note>
+        <note priority="1" from="meaning">Site title </note>
+      </trans-unit>
+      <trans-unit id="qoutes-link" datatype="html">
+        <source>
+                    <x id="START_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;mat-icon&gt;"/>format_quote<x id="CLOSE_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;/mat-icon&gt;"/> Quotes </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation/header/header.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description"> Link to quotes</note>
+        <note priority="1" from="meaning">Quotes link </note>
+      </trans-unit>
+      <trans-unit id="authors-link" datatype="html">
+        <source>
+                    <x id="START_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;mat-icon&gt;"/>people<x id="CLOSE_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;/mat-icon&gt;"/> Authors </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation/header/header.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description"> Link to authors</note>
+        <note priority="1" from="meaning">Authors link </note>
+      </trans-unit>
+      <trans-unit id="topics-link" datatype="html">
+        <source>
+                    <x id="START_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;mat-icon&gt;"/>category<x id="CLOSE_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;/mat-icon&gt;"/> Topics </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation/header/header.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description"> Link to topics</note>
+        <note priority="1" from="meaning">Topics link </note>
+      </trans-unit>
+      <trans-unit id="about-link" datatype="html">
+        <source>
+                <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>
+                    <x id="START_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;mat-icon&gt;"/>info<x id="CLOSE_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;/mat-icon&gt;"/> About <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation/header/header.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description"> Link to about</note>
+        <note priority="1" from="meaning">About link </note>
+      </trans-unit>
+      <trans-unit id="footer-paragraph" datatype="html">
+        <source>Because he is <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>the most interresting <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>person this world ever known!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation/footer/footer.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">footer paragraph</note>
+        <note priority="1" from="meaning">footer paragraph</note>
+      </trans-unit>
+      <trans-unit id="legal-sub-heading" datatype="html">
+        <source>Legal</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation/footer/footer.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Legal section</note>
+        <note priority="1" from="meaning">Legal sub-heading</note>
+      </trans-unit>
+      <trans-unit id="footer-about-link" datatype="html">
+        <source>About</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation/footer/footer.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">footer link to about</note>
+        <note priority="1" from="meaning">Footer about link</note>
+      </trans-unit>
+      <trans-unit id="privacy-policy-link" datatype="html">
+        <source>Privacy Policy</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation/footer/footer.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Link to Privacy policy</note>
+        <note priority="1" from="meaning">Privacy policy link</note>
+      </trans-unit>
+      <trans-unit id="terms-and-conditions-link" datatype="html">
+        <source>Terms &amp; Conditions</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation/footer/footer.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">Link to Terms-and-conditions</note>
+        <note priority="1" from="meaning">Terms-and-conditions link</note>
+      </trans-unit>
+      <trans-unit id="social-sub-heading" datatype="html">
+        <source>Social</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation/footer/footer.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description">social section</note>
+        <note priority="1" from="meaning">Social sub-heading</note>
+      </trans-unit>
+      <trans-unit id="copy-right" datatype="html">
+        <source>© Copyright <x id="INTERPOLATION" equiv-text="{{today | date:&quot;yyyy&quot;}}"/> Willy Nzesseu, All rights reserved</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation/footer/footer.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <note priority="1" from="description">copy-right section of footer</note>
+        <note priority="1" from="meaning">copy-right</note>
+      </trans-unit>
+      <trans-unit id="quotes-section-header" datatype="html">
+        <source>Quotes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/quotes/quotes.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Header for the quotes section</note>
+        <note priority="1" from="meaning">Quotes section header</note>
+      </trans-unit>
+      <trans-unit id="topics-section-header" datatype="html">
+        <source>Topics (Development paused)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/topics/topics.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Header for the topics section</note>
+        <note priority="1" from="meaning">Topics section header</note>
+      </trans-unit>
+      <trans-unit id="no-results-available" datatype="html">
+        <source>Nothing to show here for now! Please, come back later.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/topics/topics-grid/topics-grid.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/topics/topics-list/topics-list.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/authors/authors-grid/authors-grid.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/authors/authors-list/authors-list.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/quotes/quotes-grid/quotes-grid.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/quotes/quotes-list/quotes-list.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">No results avilable text</note>
+        <note priority="1" from="meaning">No results</note>
+      </trans-unit>
+      <trans-unit id="authors-section-header" datatype="html">
+        <source>Authors</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/authors/authors.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Header for the authors section</note>
+        <note priority="1" from="meaning">Authors section header</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
