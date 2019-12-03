@@ -57,6 +57,51 @@
         <note priority="1" from="description"> Link to about</note>
         <note priority="1" from="meaning">About link </note>
       </trans-unit>
+      <trans-unit id="close-text" datatype="html">
+        <source> Close</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation/sidenav-list/sidenav-list.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Close text</note>
+        <note priority="1" from="meaning">Close</note>
+      </trans-unit>
+      <trans-unit id="quotes-text" datatype="html">
+        <source> Quotes </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation/sidenav-list/sidenav-list.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Quotes text</note>
+        <note priority="1" from="meaning">Quotes</note>
+      </trans-unit>
+      <trans-unit id="authors-text" datatype="html">
+        <source> Authors </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation/sidenav-list/sidenav-list.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Authors text</note>
+        <note priority="1" from="meaning">Authors</note>
+      </trans-unit>
+      <trans-unit id="topics-text" datatype="html">
+        <source> Topics </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation/sidenav-list/sidenav-list.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Topics text</note>
+        <note priority="1" from="meaning">Topics</note>
+      </trans-unit>
+      <trans-unit id="about-text" datatype="html">
+        <source> About </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation/sidenav-list/sidenav-list.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">About text</note>
+        <note priority="1" from="meaning">About</note>
+      </trans-unit>
       <trans-unit id="footer-paragraph" datatype="html">
         <source>Because he is <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>the most interresting <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>person this world ever known!</source>
         <context-group purpose="location">
@@ -120,6 +165,24 @@
         <note priority="1" from="description">copy-right section of footer</note>
         <note priority="1" from="meaning">copy-right</note>
       </trans-unit>
+      <trans-unit id="language-label" datatype="html">
+        <source>Language</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/languages-list/languages-list.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Language label</note>
+        <note priority="1" from="meaning">Language</note>
+      </trans-unit>
+      <trans-unit id="author-details" datatype="html">
+        <source>Author Details</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/author/author.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Author Details label</note>
+        <note priority="1" from="meaning">Author Details</note>
+      </trans-unit>
       <trans-unit id="quotes-section-header" datatype="html">
         <source>Quotes</source>
         <context-group purpose="location">
@@ -128,6 +191,78 @@
         </context-group>
         <note priority="1" from="description">Header for the quotes section</note>
         <note priority="1" from="meaning">Quotes section header</note>
+      </trans-unit>
+      <trans-unit id="404-s1" datatype="html">
+        <source>
+      404 <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/> We are searching for the page you asked...
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation/error-pages/not-found/not-found.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">404 sentence 1</note>
+        <note priority="1" from="meaning">404 s1</note>
+      </trans-unit>
+      <trans-unit id="404-s2" datatype="html">
+        <source>
+      ... But we can not find it.
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation/error-pages/not-found/not-found.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">404 sentence 2</note>
+        <note priority="1" from="meaning">404 s2</note>
+      </trans-unit>
+      <trans-unit id="containerHeader" datatype="html">
+        <source>
+    Jesus is certainly the person who has the most positivly marked history.
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Title for the container div </note>
+        <note priority="1" from="meaning">Container Header</note>
+      </trans-unit>
+      <trans-unit id="paragrapha1" datatype="html">
+        <source>
+        From ancient prophets to well-known contemporaries, philosophers;
+        scientists; theologians; historians; artists; athletes... and many types
+        of scholars, many have spent a great deal of their life trying to know
+        him or to know the truth about him.
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Title for the Paragraph 1 of About Section </note>
+        <note priority="1" from="meaning">Paragraph A1</note>
+      </trans-unit>
+      <trans-unit id="paragrapha2" datatype="html">
+        <source>
+        They shared the results of their investigations, in several forms,
+        books; articles, interviews, poems, songs ... and the purpose of this
+        application is to present these results in a simple and easily
+        accessible form: quotes.
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <note priority="1" from="description">Title for the Paragraph 2 of About Section </note>
+        <note priority="1" from="meaning">Paragraph A2</note>
+      </trans-unit>
+      <trans-unit id="containerSubHeader" datatype="html">
+        <source>
+    We welcome you and wish you to enjoy your reading time here :).
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <note priority="1" from="description">closing line for the container div </note>
+        <note priority="1" from="meaning">Container Sub Header</note>
       </trans-unit>
       <trans-unit id="topics-section-header" datatype="html">
         <source>Topics (Development paused)</source>
@@ -167,6 +302,62 @@
         <note priority="1" from="description">No results avilable text</note>
         <note priority="1" from="meaning">No results</note>
       </trans-unit>
+      <trans-unit id="filter-label" datatype="html">
+        <source>Filter</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/topics/topics-list/topics-list.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/authors/authors-list/authors-list.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/quotes/quotes-list/quotes-list.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Filter label</note>
+        <note priority="1" from="meaning">Filter</note>
+      </trans-unit>
+      <trans-unit id="numero-label" datatype="html">
+        <source>
+            No.
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/topics/topics-list/topics-list.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/authors/authors-list/authors-list.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/quotes/quotes-list/quotes-list.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">Numero label</note>
+        <note priority="1" from="meaning">No</note>
+      </trans-unit>
+      <trans-unit id="description-label" datatype="html">
+        <source>Description</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/topics/topics-list/topics-list.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <note priority="1" from="description">Description label</note>
+        <note priority="1" from="meaning">Description</note>
+      </trans-unit>
+      <trans-unit id="name-label" datatype="html">
+        <source>
+            Name
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/topics/topics-list/topics-list.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <note priority="1" from="description">Name label</note>
+        <note priority="1" from="meaning">Name</note>
+      </trans-unit>
       <trans-unit id="authors-section-header" datatype="html">
         <source>Authors</source>
         <context-group purpose="location">
@@ -175,6 +366,64 @@
         </context-group>
         <note priority="1" from="description">Header for the authors section</note>
         <note priority="1" from="meaning">Authors section header</note>
+      </trans-unit>
+      <trans-unit id="full-name" datatype="html">
+        <source>Full name: <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/><x id="INTERPOLATION" equiv-text="{{ author.full_name }}"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/authors/authors-grid/authors-grid.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/author/author-details/author-details.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Full Name label</note>
+        <note priority="1" from="meaning">Full Name</note>
+      </trans-unit>
+      <trans-unit id="biography-label" datatype="html">
+        <source> Biography </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/authors/authors-list/authors-list.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">Biography label</note>
+        <note priority="1" from="meaning">Biography</note>
+      </trans-unit>
+      <trans-unit id="name-picture-label" datatype="html">
+        <source> Name and Picture </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/authors/authors-list/authors-list.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">Name and Picture label</note>
+        <note priority="1" from="meaning">Name and Picture</note>
+      </trans-unit>
+      <trans-unit id="quote-text" datatype="html">
+        <source> Quote </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/quotes/quotes-list/quotes-list.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">Quote text</note>
+        <note priority="1" from="meaning">Quote</note>
+      </trans-unit>
+      <trans-unit id="author-label" datatype="html">
+        <source> Author </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/quotes/quotes-list/quotes-list.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">Author label</note>
+        <note priority="1" from="meaning">Author</note>
+      </trans-unit>
+      <trans-unit id="topic-not-ready-text" datatype="html">
+        <source>Topics (Comming soon): </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/quote/quote-details/quote-details.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Topics Not Ready text</note>
+        <note priority="1" from="meaning">Topics Not Ready</note>
       </trans-unit>
     </body>
   </file>

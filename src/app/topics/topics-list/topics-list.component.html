@@ -1,5 +1,5 @@
 <mat-form-field>
-    <mat-label>Filter</mat-label>
+    <mat-label i18n='Filter|Filter label@@filter-label'>Filter</mat-label>
     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Enter a term" />
     <mat-icon matSuffix>search</mat-icon>
 </mat-form-field>
@@ -12,7 +12,7 @@
 
     <!-- No Column -->
     <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header class="msmaller center">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="msmaller center" i18n='No|Numero label@@numero-label'>
             No.
         </th>
         <td mat-cell *matCellDef="let topic" class="msmaller">{{ topic.id }}</td>
@@ -20,7 +20,7 @@
 
     <!-- Quote Column -->
     <ng-container matColumnDef="description">
-        <th mat-header-cell *matHeaderCellDef class="center">Description</th>
+        <th mat-header-cell *matHeaderCellDef class="center" i18n='Description|Description label@@description-label'>Description</th>
         <td mat-cell *matCellDef="let topic" class="mat-body">
             <p class="block-ellipsis">{{ topic.description }}</p>
         </td>
@@ -28,7 +28,7 @@
 
     <!-- Author Column -->
     <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header class="mmedium center htopic">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="mmedium center htopic" i18n='Name|Name label@@name-label'>
             Name
         </th>
         <td mat-cell *matCellDef="let topic" class="center mmedium">

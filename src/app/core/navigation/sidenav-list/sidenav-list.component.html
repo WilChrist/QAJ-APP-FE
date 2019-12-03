@@ -1,7 +1,7 @@
 <mat-nav-list>
-    <a (click)="onSidenavClose()" href="#"  mat-list-item> <mat-icon>close</mat-icon> <span class="nav-caption"> Close</span> </a>
-    <a (click)="onSidenavClose()" mat-list-item routerLinkActive="active" [routerLink]="['/quotes']"> <mat-icon>format_quote</mat-icon> <span class="nav-caption"> Quotes </span> </a>
-    <a (click)="onSidenavClose()" mat-list-item routerLinkActive="active" [routerLink]="['/authors']"> <mat-icon>people</mat-icon> <span class="nav-caption"> Authors </span> </a>
-    <a (click)="onSidenavClose()" mat-list-item routerLinkActive="active" [routerLink]="['/topics']"> <mat-icon>category</mat-icon> <span class="nav-caption"> Topics </span> </a>
-    <a (click)="onSidenavClose()" mat-list-item routerLinkActive="active" [routerLink]="['/about']"> <mat-icon>info</mat-icon> <span class="nav-caption"> About </span> </a>
+    <a (click)="onSidenavClose()" href="#"  mat-list-item> <mat-icon>close</mat-icon> <span class="nav-caption" i18n='Close|Close text@@close-text'> Close</span> </a>
+    <a (click)="onSidenavClose()" mat-list-item routerLinkActive="active" [routerLink]="['/quotes']"> <mat-icon>format_quote</mat-icon> <span class="nav-caption" i18n='Quotes|Quotes text@@quotes-text'> Quotes </span> </a>
+    <a (click)="onSidenavClose()" mat-list-item routerLinkActive="active" [routerLink]="['/authors']"> <mat-icon>people</mat-icon> <span class="nav-caption" i18n='Authors|Authors text@@authors-text'> Authors </span> </a>
+    <a (click)="onSidenavClose()" mat-list-item routerLinkActive="active" [routerLink]="['/topics']"> <mat-icon>category</mat-icon> <span class="nav-caption" i18n='Topics|Topics text@@topics-text'> Topics </span> </a>
+    <a (click)="onSidenavClose()" mat-list-item routerLinkActive="active" [routerLink]="['/about']"> <mat-icon>info</mat-icon> <span class="nav-caption" i18n='About|About text@@about-text'> About </span> </a>
   </mat-nav-list>

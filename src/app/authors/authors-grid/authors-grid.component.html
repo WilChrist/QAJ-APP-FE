@@ -5,7 +5,7 @@
             <mat-card-header>
                 <img mat-card-avatar class="author-image" src="{{apiBaseUrl}}{{author.image_url}}" />
                 <mat-card-title>{{ author.popular_name }}</mat-card-title>
-                <mat-card-subtitle>Full name: <i>{{ author.full_name }}</i></mat-card-subtitle>
+                <mat-card-subtitle i18n='Full Name|Full Name label@@full-name'>Full name: <i>{{ author.full_name }}</i></mat-card-subtitle>
                 <button mat-icon-button color="primary" aria-label="button for viewing details of this author" class="alignRight" matTooltip="details">
               <mat-icon [routerLink]="['/authors', author.id, 'details']">pageview</mat-icon>
             </button>
