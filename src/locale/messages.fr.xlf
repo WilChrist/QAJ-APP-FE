@@ -38,7 +38,7 @@
       </trans-unit>
       <trans-unit id="topics-link" datatype="html">
         <source><x id="START_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;mat-icon&gt;"/>category<x id="CLOSE_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;/mat-icon&gt;"/> Topics </source>
-        <target><x id="START_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;mat-icon&gt;"/>category<x id="CLOSE_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;/mat-icon&gt;"/> les sujets </target>
+        <target><x id="START_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;mat-icon&gt;"/>category<x id="CLOSE_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;/mat-icon&gt;"/> Sujets </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/navigation/header/header.component.html</context>
           <context context-type="linenumber">18</context>
@@ -67,7 +67,7 @@
       </trans-unit>
       <trans-unit id="footer-paragraph" datatype="html">
         <source>Because he is <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>the most interresting <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>person this world ever known!</source>
-        <target>Parce qu'il est <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>le plus intéressant <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>personne ce monde jamais connu!</target>
+        <target>Parce qu'il est <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>la personne la plus intéressant <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>que ce monde ait jamais connue!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/navigation/footer/footer.component.html</context>
           <context context-type="linenumber">7</context>
@@ -77,7 +77,7 @@
       </trans-unit>
       <trans-unit id="legal-sub-heading" datatype="html">
         <source>Legal</source>
-        <target>Légal</target>
+        <target>Informations Légales</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/navigation/footer/footer.component.html</context>
           <context context-type="linenumber">10</context>
@@ -87,7 +87,7 @@
       </trans-unit>
       <trans-unit id="footer-about-link" datatype="html">
         <source>About</source>
-        <target>Sur</target>
+        <target>A Propos</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/navigation/footer/footer.component.html</context>
           <context context-type="linenumber">12</context>
@@ -117,7 +117,7 @@
       </trans-unit>
       <trans-unit id="social-sub-heading" datatype="html">
         <source>Social</source>
-        <target>Social</target>
+        <target>Nos Réseaux Sociaux</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/navigation/footer/footer.component.html</context>
           <context context-type="linenumber">18</context>
@@ -127,7 +127,7 @@
       </trans-unit>
       <trans-unit id="copy-right" datatype="html">
         <source>© Copyright <x id="INTERPOLATION" equiv-text="{{today | date:&quot;yyyy&quot;}}"/> Willy Nzesseu, All rights reserved</source>
-        <target>© droits d'auteur <x id="INTERPOLATION" equiv-text="{{today | date:&quot;yyyy&quot;}}"/> Willy Nzesseu, Tous les droits sont réservés</target>
+        <target>© Droits d'auteur <x id="INTERPOLATION" equiv-text="{{today | date:&quot;yyyy&quot;}}"/> Willy Nzesseu, Tous droits réservés</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/navigation/footer/footer.component.html</context>
           <context context-type="linenumber">33</context>
@@ -147,7 +147,7 @@
       </trans-unit>
       <trans-unit id="topics-section-header" datatype="html">
         <source>Topics (Development paused)</source>
-        <target>Sujets (développement suspendu)</target>
+        <target>Sujets (développement en pause)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/topics/topics.component.html</context>
           <context context-type="linenumber">4</context>
