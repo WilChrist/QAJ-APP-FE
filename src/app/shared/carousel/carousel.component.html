@@ -1,5 +1,5 @@
 <ngu-carousel #myCarousel [inputs]="carouselTileConfig" [dataSource]="carouselTileItems$ | async">
-  <ngu-tile *nguCarouselDef="let item; let i = index; let ani = animate"> <!-- [@slider]="ani" PLease this animation to this tile to see animation. stackblitz have error with animations -->
+  <ngu-tile *nguCarouselDef="let item; let i = index; let ani = animate">
     <div class="tile" [style.background]="'url('+item+')'">
       <div class="quote"><h3>{{quotes[i%3].content}}</h3><h2>{{quotes[i%3].author}}</h2></div>
     </div>

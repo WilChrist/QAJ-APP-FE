@@ -117,7 +117,7 @@
       </trans-unit>
       <trans-unit id="footer-paragraph" datatype="html">
         <source>Because he is <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>the most interresting <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>person this world ever known!</source>
-        <target>Parce qu'il est <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>la personne la plus intéressant <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>que ce monde ait jamais connue!</target>
+        <target>Parce qu'il est <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>la personne la plus intéressante <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>que ce monde ait jamais connue !</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/navigation/footer/footer.component.html</context>
           <context context-type="linenumber">7</context>
@@ -215,6 +215,16 @@
         <note priority="1" from="description">Header for the quotes section</note>
         <note priority="1" from="meaning">Quotes section header</note>
       </trans-unit>
+      <trans-unit id="carousel-tooltip" datatype="html">
+        <source>If you want to continue scrolling, just click on the next point below the image.</source>
+        <target state="translated">Si vous voulez continuer le défilement, il suffit de cliquer sur le point suivant en dessous de l'image.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description"> a tooltip to explain how to relaunch the play of carousel</note>
+        <note priority="1" from="meaning">Carousel playing tooltip </note>
+      </trans-unit>
       <trans-unit id="404-s1" datatype="html">
         <source>
       404 <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/> We are searching for the page you asked...
@@ -248,7 +258,7 @@
     Jesus is certainly the person who has the most positivly marked history.
   </source>
   <target>
-    Jesus is certainement la Personne qui a le plus positivement marqué l'humanité.
+    Jésus est certainement La Personne qui a le plus positivement marqué l'humanité.
   </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.component.html</context>
@@ -266,7 +276,7 @@
       </source>
       <target>
         Des prophètes anciens aux plus connus contemporains, philosophes;
-        scientifiques; théologiens; historiens; artistes; athlètes... et plusieurs autres types d'académiciens,
+        scientifiques; théologiens; historiens; artistes; athlètes... et plusieurs autres types de savants,
         ils sont nombreux a avoir passé une grande partie de leur vie à essayer de le connaître
         ou à connaître la vérité sur lui.
       </target>
