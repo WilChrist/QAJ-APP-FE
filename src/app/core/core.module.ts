@@ -13,17 +13,20 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AddHeaderInterceptor } from './interceptors/add-header.interceptor';
 import { LogResponseInterceptor } from './interceptors/log-response.interceptor';
 import { CacheInterceptor } from './interceptors/cache.interceptor';
+import { FormsModule } from '@angular/forms';
+import { LanguageToggleComponent } from './navigation/language-toggle/language-toggle.component';
 
 
 
 @NgModule({
-  declarations: [HeaderComponent, SidenavListComponent, FooterComponent, NotFoundComponent],
+  declarations: [HeaderComponent, SidenavListComponent, FooterComponent, NotFoundComponent, LanguageToggleComponent],
   imports: [
     CommonModule,
     RouterModule,
 
     MyOwnCustomMaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormsModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: AddHeaderInterceptor, multi: true},
