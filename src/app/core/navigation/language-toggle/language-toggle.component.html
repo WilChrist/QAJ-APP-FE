@@ -1,5 +1,5 @@
 <mat-form-field>
     <mat-select [(value)]='firstLanguage'>
-        <mat-option *ngFor='let language of languages' [value]='language.code'><a href='/{{language.code}}/'>{{language.name}}</a></mat-option>
+        <mat-option *ngFor='let language of languages' [value]='language.code'><a href='/{{language.code === "en" ? "" : language.code}}/'>{{language.name}}</a></mat-option>
     </mat-select>
 </mat-form-field>
