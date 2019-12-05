@@ -17,15 +17,12 @@ export class LanguageToggleComponent implements OnInit, AfterViewInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-    console.log(window.location.href.split('/'));
   }
 
   ngAfterViewInit() {
     setTimeout(() => {
     this.firstLanguage = window.location.href.split('/')[3];
-    console.log(this.firstLanguage);
-    console.log(this.router.url);
-    }, 2000);
+    }, 1000);
   }
 
 }
