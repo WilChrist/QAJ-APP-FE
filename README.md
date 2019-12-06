@@ -1,5 +1,15 @@
 # QAJAPPF
 
+**Jesus is certainly the person who has the most positivly marked history.**
+
+> An app to share quotes about Jesus.
+
+From ancient prophets to well-known contemporaries, philosophers; scientists; theologians; historians; artists; athletes... and many types of scholars, many have spent a great deal of their life trying to know him or to know the truth about him.
+
+They shared the results of their investigations, in several forms, books; articles, interviews, poems, songs ... and the purpose of this application is to present these results in a simple and easily accessible form: quotes.
+
+![Quotes About Jesus Screenshots](https://github.com/WilChrist/QAJ-APP-FE/blob/master/QAJ_screenshot.png)
+
 [![Build Status](https://travis-ci.org/WilChrist/QAJ-APP-FE.svg?branch=master)](https://travis-ci.org/WilChrist/QAJ-APP-FE) [![Netlify Status](https://api.netlify.com/api/v1/badges/811c5c45-3748-44ef-8276-b864c5bb6174/deploy-status)](https://app.netlify.com/sites/quotesaboutjesus/deploys) [![HitCount](http://hits.dwyl.io/WilChrist/QAJ-APP-FE.svg)](http://hits.dwyl.io/WilChrist/QAJ-APP-FE)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
@@ -27,3 +37,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Contributing
+
+Check the [CONTRIBUTING.md here](https://github.com/WilChrist/QAJ-APP-FE/blob/master/CONTRIBUTING.md)
