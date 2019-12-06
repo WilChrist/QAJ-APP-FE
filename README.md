@@ -2,7 +2,7 @@
 
 **Jesus is certainly the person who has the most positivly marked history.**
 
-> An app to share quotes about Jesus.
+> The Angular Front-End part of An app to share quotes about Jesus.
 
 From ancient prophets to well-known contemporaries, philosophers; scientists; theologians; historians; artists; athletes... and many types of scholars, many have spent a great deal of their life trying to know him or to know the truth about him.
 
