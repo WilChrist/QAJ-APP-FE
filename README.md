@@ -8,7 +8,7 @@ From ancient prophets to well-known contemporaries, philosophers; scientists; th
 
 They shared the results of their investigations, in several forms, books; articles, interviews, poems, songs ... and the purpose of this application is to present these results in a simple and easily accessible form: quotes.
 
-![Quotes About Jesus Screenshots](https://github.com/WilChrist/QAJ-APP-FE/blob/master/QAJ_screenshot.png)
+![Quotes About Jesus Screenshots](https://github.com/WilChrist/QAJ-APP-FE/blob/master/QAJ_screenshot.PNG)
 
 [![Build Status](https://travis-ci.org/WilChrist/QAJ-APP-FE.svg?branch=master)](https://travis-ci.org/WilChrist/QAJ-APP-FE) [![Netlify Status](https://api.netlify.com/api/v1/badges/811c5c45-3748-44ef-8276-b864c5bb6174/deploy-status)](https://app.netlify.com/sites/quotesaboutjesus/deploys) [![HitCount](http://hits.dwyl.io/WilChrist/QAJ-APP-FE.svg)](http://hits.dwyl.io/WilChrist/QAJ-APP-FE)
 
