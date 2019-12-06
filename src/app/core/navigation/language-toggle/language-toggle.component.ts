@@ -20,10 +20,11 @@ export class LanguageToggleComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    if (window.location.href.split('/')[3].length !== 2) {
+    const parts = window.location.href.split('/');
+    if (parts[3].length !== 2) {
       this.firstLanguage = 'en';
     } else {
-      this.firstLanguage = window.location.href.split('/')[3];
+      this.firstLanguage = parts[3];
     }
   }
 
