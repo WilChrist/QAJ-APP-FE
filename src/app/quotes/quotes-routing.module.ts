@@ -3,8 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { QuotesComponent } from './quotes.component';
 
 
-const routes: Routes = [
-  {path: 'quotes', component: QuotesComponent},
+const routes = [
+  {path: 'quotes', component: QuotesComponent, useAsDefault: true},
+  {path: ':lang/quotes', component: QuotesComponent},
 ];
 
 @NgModule({

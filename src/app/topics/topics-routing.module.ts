@@ -3,8 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { TopicsComponent } from './topics.component';
 
 
-const routes: Routes = [
-  {path: 'topics', component: TopicsComponent}
+const routes = [
+  {path: 'topics', component: TopicsComponent,useAsDefault: true},
+  {path: ':lang/topics', component: TopicsComponent}
 ];
 
 @NgModule({

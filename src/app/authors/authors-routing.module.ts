@@ -3,8 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthorsComponent } from './authors.component';
 
 
-const routes: Routes = [
-  {path: 'authors', component: AuthorsComponent},
+const routes = [
+  {path: 'authors', component: AuthorsComponent, useAsDefault: true},
+  {path: ':lang/authors', component: AuthorsComponent},
 ];
 
 @NgModule({
