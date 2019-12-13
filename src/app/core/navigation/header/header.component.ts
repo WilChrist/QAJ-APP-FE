@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter, AfterViewInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { LanguageToggleService } from '../language-toggle/language-toggle.service';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +13,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   @Output() public sidenavToggle = new EventEmitter();
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute, public languageToggleService: LanguageToggleService) { }
 
   ngOnInit() {
   }
@@ -24,7 +25,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
       } else {
         this.languageCode = param.lang;
       }
-    })
+    });
   }
 
 

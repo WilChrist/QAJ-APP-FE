@@ -15,6 +15,7 @@ import { LogResponseInterceptor } from './interceptors/log-response.interceptor'
 import { CacheInterceptor } from './interceptors/cache.interceptor';
 import { FormsModule } from '@angular/forms';
 import { LanguageToggleComponent } from './navigation/language-toggle/language-toggle.component';
+import { LanguageToggleService } from './navigation/language-toggle/language-toggle.service';
 
 
 
@@ -31,7 +32,8 @@ import { LanguageToggleComponent } from './navigation/language-toggle/language-t
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: AddHeaderInterceptor, multi: true},
     {provide: HTTP_INTERCEPTORS, useClass: LogResponseInterceptor, multi: true},
-    {provide: HTTP_INTERCEPTORS, useClass: CacheInterceptor, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: CacheInterceptor, multi: true},
+    LanguageToggleService
   ],
   exports: [
     RouterModule,
