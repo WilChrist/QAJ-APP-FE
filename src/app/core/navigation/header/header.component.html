@@ -7,11 +7,11 @@
         <!-- The following menu items will be hidden on both SM and XS screen sizes -->
         <ul fxLayout fxLayoutGap="20px" class="navigation-items">
             <li>
-                <a mat-button routerLinkActive="active" [routerLink]="!this.languageCode ? ['/quotes'] : ['this.languageCode/quotes']" i18n='Quotes link | Link to quotes@@qoutes-link'>
+                <a mat-button routerLinkActive="active" [routerLink]="!this.languageToggleService.languageCode ? ['/quotes'] : ['this.languageToggleService.languageCode/quotes']" i18n='Quotes link | Link to quotes@@qoutes-link'>
                     <mat-icon>format_quote</mat-icon> Quotes </a>
             </li>
             <li>
-                <a mat-button routerLinkActive="active" [routerLink]="!this.languageCode ? ['/authors'] : ['this.languageCode/authors']" i18n='Authors link | Link to authors@@authors-link'>
+                <a mat-button routerLinkActive="active" [routerLink]="!this.languageToggleService.languageCode ? ['/authors'] : ['this.languageToggleService.languageCode/authors']" i18n='Authors link | Link to authors@@authors-link'>
                     <mat-icon>people</mat-icon> Authors </a>
             </li>
             <li>
