@@ -11,6 +11,7 @@ export class LanguageToggleService {
 
   changeLanguageCode() {
     this.activatedRoute.params.subscribe(param => {
+      console.log(param.lang);
       if (!param.lang) {
         console.log(param.lang);
         this.languageCode = undefined;
@@ -20,6 +21,6 @@ export class LanguageToggleService {
       }
     });
 
-    console.log(this.languageCode);
+    // console.log(this.languageCode);
   }
 }
