@@ -42,7 +42,7 @@ export class LanguageToggleComponent implements OnInit, AfterViewInit {
         this.router.navigateByUrl(`${languageCode}${urls}`);
       } else if (languageCode === 'en') {
         // console.log(this.activatedRoute.snapshot.url[0].path);
-        console.log(this.activatedRoute.url);
+        console.log(urls);
         console.log(this.activatedRoute.url[0].path);
       }
     });
