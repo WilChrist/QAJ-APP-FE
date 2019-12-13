@@ -17,5 +17,7 @@ export class LanguageToggleService {
         this.languageCode = param.lang;
       }
     });
+
+    console.log(this.languageCode);
   }
 }
