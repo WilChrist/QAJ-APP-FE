@@ -36,12 +36,13 @@ export class LanguageToggleComponent implements OnInit, AfterViewInit {
 
     this.activatedRoute.params.subscribe(param => {
       if (!param.lang) {
-        console.log(`${param} is present but removed`);
+        console.log(`${param.lang} is present but removed`);
         const paramValue = param.lang;
         console.log(`Url with lang is:${languageCode}${urls}`);
         this.router.navigateByUrl(`${languageCode}${urls}`);
       } else {
-        console.log(this.activatedRoute.snapshot.url[0].path);
+        // console.log(this.activatedRoute.snapshot.url[0].path);
+        console.log(this.activatedRoute.url);
       }
     });
   }
