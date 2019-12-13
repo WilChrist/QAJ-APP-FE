@@ -9,7 +9,6 @@ import { LanguageToggleService } from '../language-toggle/language-toggle.servic
 })
 
 export class HeaderComponent implements OnInit, AfterViewInit {
-  languageCode;
 
   @Output() public sidenavToggle = new EventEmitter();
 
@@ -19,13 +18,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.activatedRoute.params.subscribe(param => {
-      if (!param.lang) {
-        this.languageCode = undefined;
-      } else {
-        this.languageCode = param.lang;
-      }
-    });
+
   }
 
 
