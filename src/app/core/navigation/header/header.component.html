@@ -15,11 +15,11 @@
                     <mat-icon>people</mat-icon> Authors </a>
             </li>
             <li>
-                <a mat-button routerLinkActive="active" [routerLink]="!this.languageCode ? ['/topics'] : ['this.languageCode/topics']" i18n='Topics link | Link to topics@@topics-link'>
+                <a mat-button routerLinkActive="active" [routerLink]="!this.languageToggleService.languageCode ? ['/topics'] : ['this.languageToggleService.languageCode/topics']" i18n='Topics link | Link to topics@@topics-link'>
                     <mat-icon>category</mat-icon> Topics </a>
             </li>
             <li i18n='About link | Link to about@@about-link'>
-                <a mat-button routerLinkActive="active" [routerLink]="!this.languageCode ? ['/about'] : ['this.languageCode/about']">
+                <a mat-button routerLinkActive="active" [routerLink]="this.languageToggleService.languageCode ? ['/about'] : ['this.languageToggleService.languageCode/about']">
                     <mat-icon>info</mat-icon> About </a>
             </li>
             <li>
