@@ -36,6 +36,7 @@ export class LanguageToggleComponent implements OnInit, AfterViewInit {
     // this.router.navigate(`languageCode === "en" ? "/" : "/" + language.code + "/"`);
 
     this.activatedRoute.params.subscribe(param => {
+      console.log(param);
       if (languageCode === 'fr') {
         this.router.navigateByUrl(`${languageCode}${urls}`);
       } else if (languageCode === 'en') {
@@ -44,7 +45,7 @@ export class LanguageToggleComponent implements OnInit, AfterViewInit {
       }
     });
 
-    this.languageToggleService.changeLanguageCode();
+    this.languageToggleService.changeLanguageCode(languageCode);
   }
 
 }

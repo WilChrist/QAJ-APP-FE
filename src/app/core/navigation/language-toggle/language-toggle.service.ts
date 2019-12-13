@@ -9,17 +9,12 @@ export class LanguageToggleService {
   languageCode;
   constructor(private activatedRoute: ActivatedRoute) { }
 
-  changeLanguageCode() {
-    this.activatedRoute.params.subscribe(param => {
-      console.log(param);
-      if (!param.lang) {
-        console.log(param.lang);
-        this.languageCode = undefined;
-      } else {
-        console.log(param.lang);
-        this.languageCode = param.lang;
-      }
-    });
+  changeLanguageCode(languageCode) {
+    if (languageCode === 'en') {
+      this.languageCode = undefined;
+    } else if (languageCode !== 'en') {
+      this.languageCode = languageCode;
+    }
 
     // console.log(this.languageCode);
   }
