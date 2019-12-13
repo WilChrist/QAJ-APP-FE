@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, AfterViewInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, AfterViewInit {
   languageCode;
 
   @Output() public sidenavToggle = new EventEmitter();
@@ -15,6 +15,9 @@ export class HeaderComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
     this.activatedRoute.params.subscribe(param => {
       if (!param.lang) {
         this.languageCode = undefined;
@@ -23,6 +26,9 @@ export class HeaderComponent implements OnInit {
       }
     })
   }
+
+
+
 
   public onToggleSidenav = () => {
     this.sidenavToggle.emit();
