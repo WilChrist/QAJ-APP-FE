@@ -30,23 +30,16 @@ export class LanguageToggleComponent implements OnInit, AfterViewInit {
 
   changeLanguage(languageCode) {
     const urls = this.router.url;
-    console.log(urls);
+    console.log(window.location.href);
     // languageCode === 'en' ? this.router.navigate(['/']) : this.router.navigate([`/${languageCode}/`]);
     // this.router.navigate(`languageCode === "en" ? "/" : "/" + language.code + "/"`);
 
     this.activatedRoute.params.subscribe(param => {
       if (languageCode === 'fr') {
-        console.log(`${param.lang} is present but removed`);
-        const paramValue = param.lang;
-        console.log(`Url with lang is:${languageCode}${urls}`);
         this.router.navigateByUrl(`${languageCode}${urls}`);
       } else if (languageCode === 'en') {
-        // console.log(this.activatedRoute.snapshot.url[0].path);
-        console.log(urls);
-        console.log(urls.slice(3));
         const route = urls.slice(3);
         this.router.navigateByUrl(route);
-        console.log(this.activatedRoute.url[0].path);
       }
     });
   }
