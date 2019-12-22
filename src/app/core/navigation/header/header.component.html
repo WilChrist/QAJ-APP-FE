@@ -7,19 +7,19 @@
         <!-- The following menu items will be hidden on both SM and XS screen sizes -->
         <ul fxLayout fxLayoutGap="20px" class="navigation-items">
             <li>
-                <a mat-button routerLinkActive="active" [routerLink]="!this.languageToggleService.languageCode ? ['/quotes'] : [this.languageToggleService.languageCode + '/quotes']" i18n='Quotes link | Link to quotes@@qoutes-link'>
+                <a mat-button routerLinkActive="active" [routerLink]="['/quotes']" i18n='Quotes link | Link to quotes@@qoutes-link'>
                     <mat-icon>format_quote</mat-icon> Quotes </a>
             </li>
             <li>
-                <a mat-button routerLinkActive="active" [routerLink]="!this.languageToggleService.languageCode ? ['/authors'] : [this.languageToggleService.languageCode + '/authors']" i18n='Authors link | Link to authors@@authors-link'>
+                <a mat-button routerLinkActive="active" [routerLink]="['/authors']" i18n='Authors link | Link to authors@@authors-link'>
                     <mat-icon>people</mat-icon> Authors </a>
             </li>
             <li>
-                <a mat-button routerLinkActive="active" [routerLink]="!this.languageToggleService.languageCode ? ['/topics'] : [this.languageToggleService.languageCode + '/topics']" i18n='Topics link | Link to topics@@topics-link'>
+                <a mat-button routerLinkActive="active" [routerLink]="['/topics']" i18n='Topics link | Link to topics@@topics-link'>
                     <mat-icon>category</mat-icon> Topics </a>
             </li>
             <li i18n='About link | Link to about@@about-link'>
-                <a mat-button routerLinkActive="active" [routerLink]="this.languageToggleService.languageCode ? ['/about'] : [this.languageToggleService.languageCode + '/about']">
+                <a mat-button routerLinkActive="active" [routerLink]="['/about']">
                     <mat-icon>info</mat-icon> About </a>
             </li>
             <li>

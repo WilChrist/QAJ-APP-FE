@@ -1,6 +1,6 @@
 <mat-form-field>
     <mat-select [(value)]='firstLanguage'>
-        <a *ngFor='let language of languages' (click)='changeLanguage(language.code)'>
+        <a *ngFor='let language of languages'>
             <mat-option [value]='language.code'>{{language.name}}</mat-option>
         </a>
     </mat-select>

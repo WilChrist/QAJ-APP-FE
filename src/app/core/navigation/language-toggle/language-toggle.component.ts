@@ -1,6 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { LanguageToggleService } from './language-toggle.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-language-toggle',
@@ -15,7 +14,7 @@ export class LanguageToggleComponent implements OnInit, AfterViewInit {
 
   firstLanguage;
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, public languageToggleService: LanguageToggleService) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -27,25 +26,6 @@ export class LanguageToggleComponent implements OnInit, AfterViewInit {
     } else {
       this.firstLanguage = parts[3];
     }
-  }
-
-  changeLanguage(languageCode) {
-    const urls = this.router.url;
-    console.log(window.location.href);
-    // languageCode === 'en' ? this.router.navigate(['/']) : this.router.navigate([`/${languageCode}/`]);
-    // this.router.navigate(`languageCode === "en" ? "/" : "/" + language.code + "/"`);
-
-    this.activatedRoute.params.subscribe(param => {
-      console.log(param);
-      if (languageCode === 'fr') {
-        this.router.navigateByUrl(`${languageCode}${urls}`);
-      } else if (languageCode === 'en') {
-        const route = urls.slice(3);
-        this.router.navigateByUrl(route);
-      }
-    });
-
-    this.languageToggleService.changeLanguageCode(languageCode);
   }
 
 }
