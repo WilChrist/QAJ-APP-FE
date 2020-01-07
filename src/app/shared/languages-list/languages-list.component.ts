@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { ILanguage } from '../helpers/Interfaces';
 
@@ -11,10 +11,15 @@ import { ILanguage } from '../helpers/Interfaces';
 export class LanguagesListComponent implements OnInit {
   @Input() languages: ILanguage[];
   languagesSelect = new FormControl();
+  selected = 'all';
+  @Output() filterByProperty = new EventEmitter<number>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  filterBy(languageId) {
+    this.filterByProperty.emit(languageId);
+  }
 }

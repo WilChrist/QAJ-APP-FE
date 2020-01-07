@@ -1,6 +1,6 @@
 <div class="row">
     <p class="flow-text" *ngIf="paginatedQuotes==undefined" i18n='No results|No results avilable text@@no-results-available'>Nothing to show here for now! Please, come back later.</p>
-    <div *ngFor="let quote of paginatedQuotes" class="col s12 m6 l4 xl3">
+    <div *ngFor="let quote of quotesClone" class="col s12 m6 l4 xl3">
         <mat-card class="quote-card" *ngIf="quote!=null">
             <mat-card-header>
                 <img mat-card-avatar class="quote-author-image" src="{{apiBaseUrl}}{{quote.author.image_url}}" />

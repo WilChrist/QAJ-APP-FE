@@ -14,6 +14,8 @@ export class QuotesListComponent implements OnInit, OnChanges {
   @Input() quotes: IQuote[];
   @Input() paginatorConfigurable: PaginatorConfigurable;
   apiBaseUrl = environment.apiBaseUrl;
+  @Input() filterByProperty: number;
+  quotesClone: IQuote[];
 
   dataSource: MatTableDataSource<IQuote>;
 
@@ -30,7 +32,14 @@ export class QuotesListComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    this.dataSource = new MatTableDataSource(this.quotes);
+    if (!this.quotesClone) {
+      this.quotesClone = this.quotes.slice(0);
+    }
+
+    if (this.quotes) {
+      this.filterQuotes(this.filterByProperty);
+    }
+    this.dataSource = new MatTableDataSource(this.quotesClone);
     this.dataSource.sort = this.sort;
 
     this.paginator.length = this.paginatorConfigurable.length;
@@ -38,7 +47,20 @@ export class QuotesListComponent implements OnInit, OnChanges {
     this.paginator.pageSize = this.paginatorConfigurable.pageEvent.pageSize;
     this.paginator.pageSizeOptions = this.paginatorConfigurable.pageSizeOptions;
     this.dataSource.paginator = this.paginator;
+
+
   }
+
+  filterQuotes(filterBy) {
+    if (filterBy === 0) {
+      this.quotesClone = this.quotes.slice(0);
+    } else {
+      this.quotesClone = this.quotes.filter(quote => {
+        return quote.language_id === filterBy;
+      }
+      );
+    }
+      }
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
