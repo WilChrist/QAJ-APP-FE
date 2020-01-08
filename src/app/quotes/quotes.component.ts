@@ -16,6 +16,7 @@ export class QuotesComponent implements OnInit {
   displayMode: DisplayModeEnum;
   displayModeEnum = DisplayModeEnum;
   paginatorConfigurable: PaginatorConfigurable;
+  filterByProperty = 0;
 
   constructor(private dataService: DataService) {}
 
@@ -40,5 +41,9 @@ export class QuotesComponent implements OnInit {
   }
   changeDisplayMode(mode: DisplayModeEnum) {
     this.displayMode = mode;
+  }
+
+  recieveSelectedLanguage(languageId) {
+    this.filterByProperty = languageId;
   }
 }

@@ -13,13 +13,31 @@ export class QuotesGridComponent implements OnInit, OnChanges {
   @Input() quotes: IQuote[];
   @Input() paginatorConfigurable: PaginatorConfigurable;
   apiBaseUrl = environment.apiBaseUrl;
+  quotesClone: IQuote[] = [];
+  @Input() filterByProperty: number;
 
   constructor() { }
 
   ngOnInit() {
   }
+
   ngOnChanges(changes: SimpleChanges): void {
     this.paginateData();
+    if (this.paginatedQuotes) {
+      this.filterQuotes(this.filterByProperty);
+    }
+
+  }
+
+  filterQuotes(filterBy) {
+if (filterBy === 0) {
+  this.quotesClone = this.paginatedQuotes.slice(0);
+} else {
+  this.quotesClone = this.paginatedQuotes.filter(quote => {
+    return quote.language_id === filterBy;
+  }
+  );
+}
   }
   onPaginatorChange(event) {
     this.paginateData();
