@@ -13,6 +13,8 @@ import { TopicsModule } from './topics/topics.module';
 import { QuoteModule } from './quote/quote.module';
 import { AuthorModule } from './author/author.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -21,17 +23,19 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
 
     CoreModule,
     SharedModule,
+
+    HttpClientModule,
     AboutModule,
     TopicsModule,
     AuthorsModule,
     AuthorModule,
     QuotesModule,
     QuoteModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ServiceWorkerModule.register('./ngsw-worker.js', { enabled: environment.production})
   ],
   providers: [],
   bootstrap: [AppComponent]
