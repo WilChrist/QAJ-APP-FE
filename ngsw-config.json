@@ -29,12 +29,16 @@
           "/fr/manifest.webmanifest",
           "/fr/*.css",
           "/fr/*.js"
+        ],
+        "urls": [
+          "https://source.unsplash.com/**",
+          "https://images.unsplash.com/**"
         ]
       }
     },  {
       "name": "assets",
-      "installMode": "lazy",
-      "updateMode": "lazy",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
       "resources": {
         "files": [
           "/assets/**",
