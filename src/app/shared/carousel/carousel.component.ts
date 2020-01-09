@@ -115,7 +115,7 @@ export class CarouselComponent implements OnInit {
     },
     touch: true,
     loop: true,
-    interval: { timing: 1500 },
+    interval: { timing: 2500 },
     animation: 'lazy'
   };
   tempData: any[];
@@ -126,7 +126,7 @@ export class CarouselComponent implements OnInit {
     this.tempData = [];
     this.carouselTileItems$ = interval(500).pipe(
       startWith(-1),
-      take(20),
+      take(5),
       map(val => {
         const data = (this.tempData = [
           ...this.tempData,

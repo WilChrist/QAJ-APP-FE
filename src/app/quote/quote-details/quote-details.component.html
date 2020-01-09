@@ -1,6 +1,6 @@
 <mat-card class="quote-details-card" *ngIf="quote!=null">
   <mat-card-title-group>
-    <img mat-card-md-image class="quote-author-image" src="{{apiBaseUrl}}{{quote.author?.image_url}}" />
+    <img mat-card-md-image class="quote-author-image" src="{{apiBaseUrl}}{{quote.author?.image_url}}" alt="picture of {{ quote.author.popular_name }}"/>
     <mat-card-title><a [routerLink]="['/authors', quote.author?.id, 'details']">{{ quote.author?.popular_name }}</a></mat-card-title>
     <mat-card-subtitle>
       <i i18n='Topics Not Ready|Topics Not Ready text@@topic-not-ready-text'>Topics (Comming soon): </i>

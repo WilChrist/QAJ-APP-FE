@@ -3,7 +3,7 @@
     <div *ngFor="let quote of quotesClone" class="col s12 m6 l4 xl3">
         <mat-card class="quote-card" *ngIf="quote!=null">
             <mat-card-header>
-                <img mat-card-avatar class="quote-author-image" src="{{apiBaseUrl}}{{quote.author.image_url}}" />
+                <img mat-card-avatar class="quote-author-image" src="{{apiBaseUrl}}{{quote.author.image_url}}" alt="picture of {{ quote.author.popular_name }}"/>
                 <mat-card-title><a [routerLink]="['/authors', quote.author.id, 'details']">{{ quote.author.popular_name }}</a></mat-card-title>
                 <mat-card-subtitle>{{ quote.created_at }}</mat-card-subtitle>
                 <button mat-icon-button color="primary" aria-label="button for viewing details of this quote" class="alignRight" matTooltip="details">
