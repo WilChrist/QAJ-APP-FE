@@ -12,17 +12,47 @@
           "/manifest.webmanifest",
           "/*.css",
           "/*.js"
+        ],
+        "urls": [
+          "https://source.unsplash.com/**",
+          "https://images.unsplash.com/**"
         ]
       }
-    }, {
+    },
+    {
+      "name": "app-fr",
+      "installMode": "prefetch",
+      "resources": {
+        "files": [
+          "/fr/favicon.ico",
+          "/fr/index.html",
+          "/fr/manifest.webmanifest",
+          "/fr/*.css",
+          "/fr/*.js"
+        ]
+      }
+    },  {
       "name": "assets",
       "installMode": "lazy",
-      "updateMode": "prefetch",
+      "updateMode": "lazy",
       "resources": {
         "files": [
           "/assets/**",
           "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
         ]
+      }
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "api-performance",
+      "urls": [
+        "https://qaj.herokuapp.com/api/**"
+      ],
+      "cacheConfig": {
+        "strategy": "performance",
+        "maxSize": 250,
+        "maxAge": "1d"
       }
     }
   ]
