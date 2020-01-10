@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './language-toggle.component.html',
   styleUrls: ['./language-toggle.component.css']
 })
-export class LanguageToggleComponent implements OnInit, AfterViewInit {
+export class LanguageToggleComponent implements OnInit {
   languages = [
     {name: 'En', code: 'en'},
     {name: 'Fr', code: 'fr'}
@@ -23,10 +23,6 @@ export class LanguageToggleComponent implements OnInit, AfterViewInit {
     } else {
       this.firstLanguage = parts[3];
     }
-  }
-
-  ngAfterViewInit() {
-
   }
 
 }
