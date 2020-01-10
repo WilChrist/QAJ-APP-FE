@@ -13,8 +13,8 @@ export class QuotesGridComponent implements OnInit, OnChanges {
   @Input() quotes: IQuote[];
   @Input() paginatorConfigurable: PaginatorConfigurable;
   apiBaseUrl = environment.apiBaseUrl;
-  quotesClone: IQuote[] = [];
   @Input() filterByProperty: number;
+  quotesClone: IQuote[];
 
   constructor() { }
 
@@ -22,22 +22,23 @@ export class QuotesGridComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    this.paginateData();
-    if (this.paginatedQuotes) {
-      this.filterQuotes(this.filterByProperty);
+    if (this.quotes && !this.quotesClone) {
+      this.quotesClone = this.quotes.slice(0);
     }
-
+    this.filterAndPaginateQuotes();
   }
 
   filterQuotes(filterBy) {
-if (filterBy === 0) {
-  this.quotesClone = this.paginatedQuotes.slice(0);
-} else {
-  this.quotesClone = this.paginatedQuotes.filter(quote => {
-    return quote.language_id === filterBy;
-  }
-  );
-}
+    if (this.quotesClone !== undefined) {
+      if (filterBy === 0) {
+        this.quotes = this.quotesClone.slice(0);
+      } else {
+        this.quotes = this.quotesClone.filter(quote => {
+          return quote.language_id === filterBy;
+        }
+        );
+      }
+    }
   }
   onPaginatorChange(event) {
     this.paginateData();
@@ -46,11 +47,16 @@ if (filterBy === 0) {
   paginateData() {
     if (this.quotes !== undefined) {
       this.paginatedQuotes = this.quotes.slice(
-      this.paginatorConfigurable.pageEvent.pageIndex *
+        this.paginatorConfigurable.pageEvent.pageIndex *
         this.paginatorConfigurable.pageEvent.pageSize,
-      (this.paginatorConfigurable.pageEvent.pageIndex + 1) *
+        (this.paginatorConfigurable.pageEvent.pageIndex + 1) *
         this.paginatorConfigurable.pageEvent.pageSize
       );
     }
+  }
+
+  filterAndPaginateQuotes() {
+    this.filterQuotes(this.filterByProperty);
+    this.paginateData();
   }
 }

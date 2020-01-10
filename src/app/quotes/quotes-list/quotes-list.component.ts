@@ -32,7 +32,7 @@ export class QuotesListComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (!this.quotesClone) {
+    if (this.quotes && !this.quotesClone) {
       this.quotesClone = this.quotes.slice(0);
     }
 
